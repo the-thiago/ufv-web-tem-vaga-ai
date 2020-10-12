@@ -2,32 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Tem Vaga Ai</title>
+        <title>Tem Vaga Ai!</title>
         <link rel="stylesheet" href="css/folhaDeEstilo.css">
-
-        <script>
-            var slideIndex = 1;
-                showDivs(slideIndex);
-                
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
-            }
-            
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("slide");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-                }
-                x[slideIndex-1].style.display = "block";  
-            }
-            function fecharAvisoCovid(){
-                document.getElementById("aviso").style.display = 'none';                
-            }        
-        </script>
-
+        <script src="scripts/funcoes.js"></script>
     </head>
     <body onload="showDivs()">
         <!-- div  alerta do corona virus -->
@@ -45,7 +22,7 @@
         <div id="cabecalho">
             <img src="imagens/LogoTeste_200X127.png" alt="logo">
             <form action="html/paginaresultados2.html">
-              <input type="text" id="pesuisa" name="pesquisa"<br>
+                <input type="text" id="pesuisa" name="pesquisa">
             </form>
             <form action="html/paginaresultados2.html">
                 <select id="Categorias" name="Categorias">
@@ -104,10 +81,9 @@
                 </div>
             </div>
         </div>
-        <!-- div de roda pe onde colocara as informacao do roda pe-->
+        <!-- div de rodape onde colocara as informacao do roda pe-->
         <div id="rodape">
-            <!-- <p>Tem Vaga Ai LTDA<br>CNPJ: 11.111.0001-01<br>Tel: (34) 3333-4444<br>Email:contato@temvagaai.com.br</p> -->
-            <ul class="rodape">
+           <ul class="rodape">
                 <li class="rodape">Tem Vaga Ai LTDA</li>
                 <li class="rodape">CNPJ: 11.111.0001-01</li>
                 <li class="rodape">Tel: (34)3333-4444</li>

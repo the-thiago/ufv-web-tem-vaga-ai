@@ -2,16 +2,64 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Tem Vaga Ai!</title>
+        <title>Resultado de pesquisa - Tem Vaga Ai!</title>
+        <link rel="stylesheet" href="../css/folhaDeEstilo.css">
+        <script src="../scripts/funcoes.js"></script>
     </head>
     <body>
-        <div> 
-
-
+        <!-- div  alerta do corona virus -->
+        <div id="aviso">
+            <div class="AvisoEsquerda" id="AvisoEsquerda">
+                COVID-2019: Seguimos todas as medidas de segurança à risca.
+                Saiba mais clicando 
+                <a href="https://coronavirus.saude.gov.br/">aqui.</a>
+            </div>
+            <div class="AvisoDireita" >
+                <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>                
+            </div>        
         </div>
-        <div>
-            
+        <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+        <div id="cabecalho">
+            <img src="../imagens/LogoTeste_200X127.png" alt="logo">
+            <form action="paginaresultados2.html">
+                <input type="text" id="pesuisa" name="pesquisa">
+            </form>
+            <form action="paginaresultados2.html">
+                <select id="Categorias" name="Categorias">
+                  <option value="Chacaras">Chacaras</option>
+                  <option value="Apartamentos">Apartamentos</option>
+                  <option value="Ranchos Rios">Ranchos Rios</option>
+                  <option value="Casas Beira Mar">Casas Beira Mar</option>
+                </select>
+                <select id="Cidades" name="Cidades">
+                    <option value="Rio Paranaiba">Rio Paranaiba</option>
+                    <option value="São Gotardo">São Gotardo</option>
+                    <option value="Tres Marias">Tres Marias</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                  </select>
+                <input type="submit">
+            </form>
+                    
+            <ul id="BotoesMenu">
+                <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+                <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+                <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+            </ul>  
         </div>
+
+        <br><br>
+        <p style="text-align: center;">Fazer meio da pagina!</p>
+        <br><br>
     
+        <!-- div de rodape onde colocara as informacao do roda pe-->
+        <div id="rodape">
+            <ul class="rodape">
+                <li class="rodape">Tem Vaga Ai LTDA</li>
+                <li class="rodape">CNPJ: 11.111.0001-01</li>
+                <li class="rodape">Tel: (34)3333-4444</li>
+                <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
+            </ul>
+        </div>
+
     </body>
 </html>
