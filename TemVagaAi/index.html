@@ -4,19 +4,46 @@
         <meta charset="UTF-8">
         <title>Tem Vaga Ai</title>
         <link rel="stylesheet" href="css/folhaDeEstilo.css">
+
+        <script>
+            var slideIndex = 1;
+                showDivs(slideIndex);
+                
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("slide");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+            }
+            function fecharAvisoCovid(){
+                document.getElementById("aviso").style.display = 'none';                
+            }        
+        </script>
+
     </head>
-    <body>
+    <body onload="showDivs()">
         <!-- div  alerta do corona virus -->
         <div id="aviso">
-            <p>
+            <div class="AvisoEsquerda" id="AvisoEsquerda">
                 COVID-2019: Seguimos todas as medidas de segurança à risca.
                 Saiba mais clicando 
                 <a href="https://coronavirus.saude.gov.br/">aqui.</a>
-            </p>            
+            </div>
+            <div class="AvisoDireita" >
+                <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>                
+            </div>        
         </div>
         <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
-        <div id:cabecalho>
-            <img src="imagens/Logo_200X127.png" alt="logo">
+        <div id="cabecalho">
+            <img src="imagens/LogoTeste_200X127.png" alt="logo">
             <form action="html/paginaresultados2.html">
               <input type="text" id="pesuisa" name="pesquisa"<br>
             </form>
@@ -36,47 +63,56 @@
                 <input type="submit">
             </form>
                     
-            <ul>
-                <li>Historico</li>
-                <li>Avisos e Mensagens</li>
-                <li>Login</li>
+            <ul id="BotoesMenu">
+                <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+                <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+                <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
             </ul>  
         </div>
         <!--div principal informacoes que muda toda as paginas-->
-        <div id:pageinfo>
-            <div id:banner>
-                <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->
-                <img src="imagens/banner1_500X600.png" alt="baner1">
-                <img src="imagens/banner2_500X600.png" alt="baner2">
-                <img src="imagens/banner3_500X600.png" alt="baner3">
+        <div >
+            <div id="slides-div" onload="carregarPagina();">
+                <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->                
+                <img class="slide" src="imagens/banner1_500X600.png" alt="baner1">
+                <img class="slide" src="imagens/banner2_500X600.png" alt="baner2">
+                <img class="slide" src="imagens/banner3_500X600.png" alt="baner3">   
+                <button class="botao-slide-esquerda" onclick="plusDivs(-1)">&#10094;</button>             
+                <button class="botao-slide-direita" onclick="plusDivs(1)">&#10095;</button>
+                
             </div>
-            <div id:abacomentarios>
-                <div id:comentario>
-                 <img src="imagens/cara_pessoa.png" alt="carapessoa"> 
-                 <h1>Rodrigo de Oliveira Costa</h1>
-                 <h2>25 anos.</h2>
-                 <h3>Rancho2 - Tres Marias MG</h3>
-                 <p>Estadia muito confortavel e taltaltaltaltaltaltaltaltaltaltaltaltatlatatltatlata</p>
+            <div id="grid-container">
+                <div class="left">
+                    <img src="imagens/cara_pessoa.png" alt="carapessoa"> 
+                    <h1>Rodrigo de Oliveira Costa</h1>
+                    <h2>25 anos.</h2>
+                    <h3>Rancho2 - Tres Marias MG</h3>
+                    <p>Estadia muito confortavel e taltaltaltaltaltaltaltaltaltaltaltaltatlatatltatlata</p>
                 </div>
-                <div id:comentario>
+                <div class="middle">
                     <img src="imagens/cara_pessoa.png" alt="carapessoa"> 
                     <h1>Tiao das Dez</h1>
                     <h2>45 anos.</h2>
                     <h3>Apartamento Barretos</h3>
                     <p>Estadia muito confortavel e taltaltaltaltaltaltaltaltaltaltaltaltatlatatltatlata</p>
                 </div>
-                <div id:comentario>
+                <div class="right">
                     <img src="imagens/cara_pessoa.png" alt="carapessoa"> 
                     <h1>Ze sem Criatividade</h1>
                     <h2>18 anos.</h2>
                     <h3>Casa - Vitoria ES</h3>
-                    <p>dfgsfgsfhsdgfjgfdkjgfkfsghkfkfshkhfstaltaltaltaltaltaltaltaltaltaltaltaltatlatatltatlata</p>
-                   </div>
+                    <p>dfgsfgsfhsdgfjgfdkjgfkfsghkfkfshkhfstaltaltaltaltaltaltalt</p>
+                </div>
             </div>
         </div>
         <!-- div de roda pe onde colocara as informacao do roda pe-->
-        <div id:rodape>
-            <p>Tem Vaga Ai LTDA<br>CNPJ: 11.111.0001-01<br>Tel: (34) 3333-4444<br>Email:contato@temvagaai.com.br</p>
+        <div id="rodape">
+            <!-- <p>Tem Vaga Ai LTDA<br>CNPJ: 11.111.0001-01<br>Tel: (34) 3333-4444<br>Email:contato@temvagaai.com.br</p> -->
+            <ul class="rodape">
+                <li class="rodape">Tem Vaga Ai LTDA</li>
+                <li class="rodape">CNPJ: 11.111.0001-01</li>
+                <li class="rodape">Tel: (34)3333-4444</li>
+                <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
+            </ul>
         </div>
     
     </body>
