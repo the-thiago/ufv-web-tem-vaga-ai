@@ -16,7 +16,7 @@ div#aviso {
     width: 100%;
     background-color: #363435;
     color: white;
-    padding: 1px 4px 4px 4px;
+    padding: 1px 0px 4px 0px;
     text-align: center;
     display: flex;
 }
@@ -78,18 +78,23 @@ div#aviso {
 
 /* Cabecalho, topo menu*/
 div#cabecalho {
-    width: 100%;
     display: flex;
-    align-items: center;
     background-color: #682A2C;
     color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
+img#logo{
+    padding-right: 12px;
+}
+
 ul#BotoesMenu {
     list-style-type: none;
     padding: 15px;
     overflow: hidden;
     margin: 0px;
-  }
+}
 
 li.Menu {
     display: inline;
@@ -99,20 +104,15 @@ li.Menu {
 a.Menu{
     text-decoration: none;
     color: white;
-    padding: 27px 15px 37px 15px;
+    padding: 27px 10px 37px 10px;
     
-}
-
-li.Menu:hover{
-    display: inline;
-    background-color: white;
-    padding: 27px 15px 37px 15px;
 }
 
 li.Menu a:hover{
     text-decoration: none;
     color: black;  
-    padding: 27px 15px 37px 15px;
+    padding: 27px 10px 37px 10px;
+    background-color: white;
 }
 
 /* Comentarios de Clientes */
@@ -152,10 +152,6 @@ ul.rodape {
 
 /* PAGINA 02 */
 /* resultados */
-div#resultados{
-    
-    
-}
 div.result{
     /*
     display: flex;
@@ -163,7 +159,7 @@ div.result{
     padding: 10px;*/
     display: flex;
     width: 100%;
-    margin: 10px;
+    margin: 13px 0px;
     background-color: rgb(212, 203, 203);
     
 }
@@ -196,18 +192,14 @@ div.DivConteudo{
     
 }
 
-
-
-div.fotoResultados{
-    
-    align-items: center;
-    width: 100px;
-    height: 100px;
-}
 img{
     max-width: 100%;
     max-height: 100%;
     
 }
-
+div.fotoResultados{
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
 
