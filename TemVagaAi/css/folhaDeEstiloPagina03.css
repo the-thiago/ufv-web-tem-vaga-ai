@@ -31,51 +31,6 @@ div#aviso {
     float: left;
 }
 
-/* Slide de imagens */
-.slide{     
-    width:100%;
-}
-
-.botao-slide-esquerda{
-    color: #fff!important;
-    background-color: #363435!important;
-    position: absolute;    
-    top: 43%;
-    left: 0%;
-    transform: translate(0%,-50%);;
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    
-}
-.botao-slide-direita{
-    color: #fff!important;
-    background-color: #363435!important;
-    position: absolute;    
-    top: 43%;
-    right: 0%;
-    transform: translate(0%,-50%);
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
 /* Cabecalho, topo menu*/
 div#cabecalho {
     display: flex;
@@ -115,19 +70,6 @@ li.Menu a:hover{
     background-color: white;
 }
 
-/* Comentarios de Clientes */
-div#grid-container{
-    display: flex;
-}
-.left, .middle, .right{
-    border-width: 1px;
-    border-color: black;
-    border-radius: 1px;
-    float: left;
-    width: 33.33%;
-    padding: 25px;
-}
-
 
 /* Rodapé */
 div#rodape {
@@ -149,60 +91,6 @@ ul.rodape {
     padding: 0px;
     margin: 0px;
 }
-
-/* PAGINA 02 */
-/* resultados */
-div.result{
-    /*
-    display: flex;
-    margin: 0 auto;
-    padding: 10px;*/
-    display: flex;
-    width: 100%;
-    margin: 13px 0px;
-    background-color: rgb(212, 203, 203);
-    
-}
-
-div.DivFotoResultados{
-    box-sizing: content-box;
-    border-radius: 4px;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    font-size: 1px;
-    height: 216px;
-    margin: 0;
-    overflow: hidden;
-    padding: 10px;
-    width: 384px;
-    position: relative;
-    /*
-    padding-left: 50px;
-    max-width: 10;*/
-}
-div.DivConteudo{
-    width: -webkit-calc(100% - 208px);
-    width: calc(100% - 208px);
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    padding: 10px;
-
-    
-}
-
-img{
-    max-width: 100%;
-    max-height: 100%;
-    
-}
-div.fotoResultados{
-    align-items: center;
-    width: 100px;
-    height: 100px;
-}
-
 
 /* Estilo do slide, pagina 3 */ 
 
@@ -248,7 +136,7 @@ div.fotoResultados{
 .slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
 .slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
 
-.DivImagensSlide{    
+.DivImagensSlide{        
     text-align: center;  
     background-color: black;  
 }
@@ -261,4 +149,73 @@ div.fotoResultados{
 }
 .slide-controller{
     margin: 10px;
+}
+
+.Resultados{
+    margin-top: 10px;
+}
+
+
+/* Comentarios de Clientes */
+div#grid-container{
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+}
+.left, .middle, .right{
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+    float: left;
+    width: 33.33%;
+    margin: 15px;
+    padding: 15px;
+    background-color: Gainsboro;
+    color: black;
+}
+.left{
+    margin-left: 25px;
+}
+.middle{
+    
+}
+.right{
+    margin-right: 25px;
+    
+}
+
+
+/* Mexendo com as 3 divs do final da pagina */
+.duvida{
+
+}
+
+.datas{
+    
+    height: 150px;
+}
+.botao-alugar{
+    text-align: center;
+    
+    
+}
+#botao-alugar{
+    width: 70%;
+    height: 40px;
+}
+.data-chegada{
+    padding-left: 15px;
+}
+.data-saida{
+    padding-left: 15px;
+}
+
+#Mensagens{
+    width: 99%;
+    height: 150px;
+}
+.duvida{
+}
+.label{
+    font-size: 23px;
 }

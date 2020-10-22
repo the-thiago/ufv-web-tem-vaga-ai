@@ -1,97 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Detalhes - Tem Vaga Ai!</title>
-        <link rel="stylesheet" href="../css/folhaDeEstilo.css">
-        <script src="../scripts/funcoes.js"></script>
-    </head>
-    <body>
-        <!-- div  alerta do corona virus -->
-        <div id="aviso">
-            <div class="AvisoEsquerda" id="AvisoEsquerda">
-                COVID-2019: Seguimos todas as medidas de segurança à risca.
-                Saiba mais clicando 
-                <a href="https://coronavirus.saude.gov.br/">aqui.</a>
-            </div>
-            <div class="AvisoDireita" >
-                <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>                
-            </div>        
-        </div>
-        <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
-        <div id="cabecalho">
-            <a href="../index.html">
-                <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
-            </a>
-            <form action="paginaresultados2.html">
-                <input type="text" id="pesuisa" name="pesquisa">
-            </form>
-            <form action="paginaresultados2.html">
-                <select id="Categorias" name="Categorias">
-                  <option value="Chacaras">Chacaras</option>
-                  <option value="Apartamentos">Apartamentos</option>
-                  <option value="Ranchos Rios">Ranchos Rios</option>
-                  <option value="Casas Beira Mar">Casas Beira Mar</option>
-                </select>
-                <select id="Cidades" name="Cidades">
-                    <option value="Rio Paranaiba">Rio Paranaiba</option>
-                    <option value="São Gotardo">São Gotardo</option>
-                    <option value="Tres Marias">Tres Marias</option>
-                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                  </select>
-                <input type="submit">
-            </form>
-                    
-            <ul id="BotoesMenu">
-                <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
-                <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
-                <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
-            </ul>  
-        </div>
-        <div class="Resultados">
-            <!-- div resultado final vai ter varias fotos do lugar -->
-            <img src="../imagens/apartamento1/1.png" alt="Apartamentos Praia">
-            <img src="../imagens/apartamento1/2.png" alt="Apartamentos Praia"> 
-            <img src="../imagens/apartamento1/3.png" alt="Apartamentos Praia">  
-            <img src="../imagens/apartamento1/4.png" alt="Apartamentos Praia"> 
-            <img src="../imagens/apartamento1/5.png" alt="Apartamentos Praia"> 
-            <!-- Aqui vai ter as informacoes da tela anterio + um campo de informacao grande-->
-            <h1>Apartamento Praia</h1>
-            <h2>Diaria: R$400,00</h2>
-            <h3>Balneário Camboriú SC</h3>
-            <p>Apartamento com vista pro mar</p>
-            <!-- texto aleatorio-->
-            <p>
-                Lorem ipsum nisl vehicula elementum netus curabitur egestas porttitor, morbi orci sagittis eleifend nisi volutpat lorem curabitur, mi dictum purus mattis sit arcu malesuada. 
-                pulvinar dapibus bibendum dictum erat leo consectetur convallis lacinia, aenean varius nunc aliquet posuere pretium sed consequat, senectus enim tristique eget nulla etiam tempus. 
-                mattis a dui nisi fames malesuada libero, interdum eget magna nunc erat netus mattis, lectus gravida taciti posuere vitae. 
-                leo turpis netus aenean suspendisse proin molestie interdum feugiat placerat commodo, convallis quis maecenas id metus amet hac magna adipiscing. 
-                amet convallis ultrices placerat feugiat consequat ultrices egestas, fermentum ante dapibus rutrum ipsum. 
-            </p>            
-            <form action="retorno.html">
-                <input type="text" id="Mensagens" name="mensagem" placeholder="Envie sua duvida:">
-                <input type="submit" value="enviar">
-            </form>
-            <form action="alugar.html">
-                <label for="dtIncio">Data de Chegada:</label><br>
-                <input id="dateI" type="date"><br>
-                <label for="dFim">Data Final:</label><br>
-                <input id="dateF" type="date"><br>
-                <input type = "submit" value = "alugar">
 
-            </form>
-            
-            
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes - Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="../css/folhaDeEstiloPagina03.css">
+    <script src="../scripts/funcoes.js"></script>
+</head>
+
+<body>
+    <!-- div  alerta do corona virus -->
+    <div id="aviso">
+        <div class="AvisoEsquerda" id="AvisoEsquerda">
+            COVID-2019: Seguimos todas as medidas de segurança à risca.
+            Saiba mais clicando
+            <a href="https://coronavirus.saude.gov.br/">aqui.</a>
         </div>
-        <!-- div de rodape onde colocara as informacao do roda pe-->
-        <div id="rodape">
-            <ul class="rodape">
-                <li class="rodape">Tem Vaga Ai LTDA</li>
-                <li class="rodape">CNPJ: 11.111.0001-01</li>
-                <li class="rodape">Tel: (34)3333-4444</li>
-                <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
-            </ul>
+        <div class="AvisoDireita">
+            <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
         </div>
-    
-    </body>
+    </div>
+    <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+    <div id="cabecalho">
+        <a href="../index.html">
+            <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
+        </a>
+        <form action="paginaresultados2.html">
+            <input type="text" id="pesuisa" name="pesquisa">
+        </form>
+        <form action="paginaresultados2.html">
+            <select id="Categorias" name="Categorias">
+                <option value="Chacaras">Chacaras</option>
+                <option value="Apartamentos">Apartamentos</option>
+                <option value="Ranchos Rios">Ranchos Rios</option>
+                <option value="Casas Beira Mar">Casas Beira Mar</option>
+            </select>
+            <select id="Cidades" name="Cidades">
+                <option value="Rio Paranaiba">Rio Paranaiba</option>
+                <option value="São Gotardo">São Gotardo</option>
+                <option value="Tres Marias">Tres Marias</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <ul id="BotoesMenu">
+            <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+            <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+            <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+        </ul>
+    </div>
+    <div class="Resultados">
+        <div class="DivImagensSlide">
+            <input type="radio" class="slide-controller" name="slide" checked />
+            <input type="radio" class="slide-controller" name="slide" />
+            <input type="radio" class="slide-controller" name="slide" />
+            <input type="radio" class="slide-controller" name="slide" />
+            <div class="slide-show">
+                <ul class="slides-list">
+                    <li class="slide">
+                        <img src="../imagens/apartamento1/1.png" alt="Apartamentos Praia">
+                    </li>
+                    <li class="slide">
+                        <img src="../imagens/apartamento1/2.png" alt="Apartamentos Praia">
+                    </li>
+                    <li class="slide">
+                        <img src="../imagens/apartamento1/3.png" alt="Apartamentos Praia">
+                    </li>
+                    <li class="slide">
+                        <img src="../imagens/apartamento1/4.png" alt="Apartamentos Praia">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="linha"></div>
+
+        <!-- Aqui vai ter as informacoes da tela anterio + um campo de informacao grande-->
+
+        <div id="grid-container">
+            <div class="left">
+                <h1>Apartamento Praia</h1>
+                <h2>Diaria: R$400,00</h2>
+                <h3>Balneário Camboriú SC</h3>
+                <p>Apartamento com vista pro mar</p>
+                <!-- texto aleatorio-->
+                <p>
+                    Lorem ipsum nisl vehicula elementum netus curabitur egestas porttitor, morbi orci sagittis eleifend
+                    nisi
+                    volutpat lorem curabitur, mi dictum purus mattis sit arcu malesuada.
+                    pulvinar dapibus bibendum dictum erat leo consectetur convallis lacinia, aenean varius nunc aliquet
+                    posuere
+                    pretium sed consequat, senectus enim tristique eget nulla etiam tempus.
+                    mattis a dui nisi fames malesuada libero, interdum eget magna nunc erat netus mattis, lectus gravida
+                    taciti
+                    posuere vitae.
+                    leo turpis netus aenean suspendisse proin molestie interdum feugiat placerat commodo, convallis quis
+                    maecenas id metus amet hac magna adipiscing.
+                    amet convallis ultrices placerat feugiat consequat ultrices egestas, fermentum ante dapibus rutrum
+                    ipsum.
+                </p>
+            </div>
+            <div class="middle">
+                <div class="duvida">
+                    <form action="retorno.html">
+                        <textarea name="mensagem" id="Mensagens" rows="10" placeholder="Envie sua duvida:"></textarea>
+                        <br>
+                        <input type="submit" value="enviar">
+                    </form>
+                </div>
+                <div class="datas">
+                    <div class="data-chegada">
+                        <form action="alugar.html">
+                            <label for="dtIncio" class="label">Data de Chegada:</label><br>
+                            <input id="dateI" type="date"><br>
+                        </form>
+                    </div>
+                    <div class="data-saida">
+                        <form action="alugar.html">
+                            <label for="dFim"  class="label">Data Final:</label><br>
+                            <input id="dateF" type="date"><br>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="botao-alugar">
+                    <input id="botao-alugar" type="submit" value="Alugar">
+                </div>
+            </div>
+            <div class="right">
+                <img src="../imagens/cara_pessoa.png" alt="carapessoa">
+                <h1>Ze sem Criatividade</h1>
+                <h2>18 anos.</h2>
+                <h3>Balneário Camboriú SC</h3>
+                <p>Gostei muito da casa, bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <div id="rodape">
+        <ul class="rodape">
+            <li class="rodape">Tem Vaga Ai LTDA</li>
+            <li class="rodape">CNPJ: 11.111.0001-01</li>
+            <li class="rodape">Tel: (34)3333-4444</li>
+            <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
+        </ul>
+    </div>
+
+</body>
+
 </html>

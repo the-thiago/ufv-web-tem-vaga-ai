@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Resultado de pesquisa - Tem Vaga Ai!</title>
-        <link rel="stylesheet" href="../css/folhaDeEstilo.css">
-        <script src="../scripts/funcoes.js"></script>
-    </head>
-    <body>
-        <!-- div  alerta do corona virus -->
-        <div id="aviso">
-            <div class="AvisoEsquerda" id="AvisoEsquerda">
-                COVID-2019: Seguimos todas as medidas de segurança à risca.
-                Saiba mais clicando 
-                <a href="https://coronavirus.saude.gov.br/">aqui.</a>
-            </div>
-            <div class="AvisoDireita" >
-                <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>                
-            </div>        
-        </div>
-        <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
-        <div id="cabecalho">
-            <a href="../index.html">
-                <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
-            </a>
-            <form action="paginaresultados2.html">
-                <input type="text" id="pesuisa" name="pesquisa">
-            </form>
-            <form action="paginaresultados2.html">
-                <select id="Categorias" name="Categorias">
-                  <option value="Chacaras">Chacaras</option>
-                  <option value="Apartamentos">Apartamentos</option>
-                  <option value="Ranchos Rios">Ranchos Rios</option>
-                  <option value="Casas Beira Mar">Casas Beira Mar</option>
-                </select>
-                <select id="Cidades" name="Cidades">
-                    <option value="Rio Paranaiba">Rio Paranaiba</option>
-                    <option value="São Gotardo">São Gotardo</option>
-                    <option value="Tres Marias">Tres Marias</option>
-                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                  </select>
-                <input type="submit">
-            </form>
-                    
-            <ul id="BotoesMenu">
-                <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
-                <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
-                <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
-            </ul>  
-        </div>
-        <!-- div resultados essa parte vai ter uma imagem na esquerda e informacoes na direita e o nome sera-->
-        <div id="resultados">
-            <div class="result">
-                <div class="DivFotoResultados">
-                    <div class="DivTamanhoFoto">
-                        <img class="fotoResultados" src="../imagens/rancho1/1.png" alt="Rancho Amarelo"> 
-                    </div>
-                </div>  
-                <div class="DivConteudo">
-                    <h1>Rancho Amarelo</h1>
-                    <h2>Diaria: R$200,00</h2>
-                    <h3>Tres Marias MG</h3>
-                    <p>Otimo pesqueiro para 6 pessoas com ar condicionado e WI_FI</p>
-                </div>             
-            </div>
-            <div class="result">
-                <div class="DivFotoResultados">
-                    <div class="DivTamanhoFoto">
-                        <img class="fotoResultados" src="../imagens/apartamento1/1.png" alt="Apartamentos Praia"> 
-                    </div>                    
-                </div>          
-                <div class="DivConteudo">
-                    <h1>Apartamento Praia</h1>
-                    <h2>Diaria: R$400,00</h2>
-                    <h3>Balneário Camboriú SC</h3>
-                    <p>Apartamento com vista pro mar</p>
-                </div>              
-            </div>
-            <div class="result">
-                <div class="DivFotoResultados">
-                    <div class="DivTamanhoFoto">
-                        <img class="fotoResultados" src="../imagens/casa1/1.png" alt="Casa de Inverno"> 
-                    </div>
-                </div>  
-                <div class="DivConteudo">
-                    <h1>Casa de Inverno</h1>
-                    <h2>Diaria: R$300,00</h2>
-                    <h3>Campos do Jordão SP</h3>
-                    <p>Charmoso Chalé Duplex com duas suítes para até 4 adultos e 1 criança</p>
-                </div>             
-            </div>
-        </div>
-        <!-- div de rodape onde colocara as informacao do roda pe-->
-        <div id="rodape">
-            <ul class="rodape">
-                <li class="rodape">Tem Vaga Ai LTDA</li>
-                <li class="rodape">CNPJ: 11.111.0001-01</li>
-                <li class="rodape">Tel: (34)3333-4444</li>
-                <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
-            </ul>
-        </div>
 
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de pesquisa - Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="../css/folhaDeEstiloPagina02.css">
+    <script src="../scripts/funcoes.js"></script>
+</head>
+
+<body>
+    <!-- div  alerta do corona virus -->
+    <div id="aviso">
+        <div class="AvisoEsquerda" id="AvisoEsquerda">
+            COVID-2019: Seguimos todas as medidas de segurança à risca.
+            Saiba mais clicando
+            <a href="https://coronavirus.saude.gov.br/">aqui.</a>
+        </div>
+        <div class="AvisoDireita">
+            <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
+        </div>
+    </div>
+    <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+    <div id="cabecalho">
+        <a href="../index.html">
+            <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
+        </a>
+        <form action="paginaresultados2.html">
+            <input type="text" id="pesuisa" name="pesquisa">
+        </form>
+        <form action="paginaresultados2.html">
+            <select id="Categorias" name="Categorias">
+                <option value="Chacaras">Chacaras</option>
+                <option value="Apartamentos">Apartamentos</option>
+                <option value="Ranchos Rios">Ranchos Rios</option>
+                <option value="Casas Beira Mar">Casas Beira Mar</option>
+            </select>
+            <select id="Cidades" name="Cidades">
+                <option value="Rio Paranaiba">Rio Paranaiba</option>
+                <option value="São Gotardo">São Gotardo</option>
+                <option value="Tres Marias">Tres Marias</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <ul id="BotoesMenu">
+            <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+            <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+            <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+        </ul>
+    </div>
+    <!-- div resultados essa parte vai ter uma imagem na esquerda e informacoes na direita e o nome sera-->
+    <div id="resultados">
+        <div class="result">
+            <div class="DivFotoResultados">
+                <div class="DivTamanhoFoto">
+                    <a href="../html/resultadoselecao3.html">
+                        <img class="fotoResultados" src="../imagens/rancho1/1.png" alt="Rancho Amarelo">
+                    </a>
+                </div>
+            </div>
+            <div class="DivConteudo">
+                <a href="../html/resultadoselecao3.html" class="linkPag2">
+                    <h1>Rancho Amarelo</h1>
+                </a>
+                <h2>Diaria: R$200,00</h2>
+                <h3>Tres Marias MG</h3>
+                <p>Otimo pesqueiro para 6 pessoas com ar condicionado e WI_FI</p>
+            </div>
+        </div>
+        <div class="result">
+            <div class="DivFotoResultados">
+                <div class="DivTamanhoFoto">
+                    <a href="../html/resultadoselecao3.html">
+                        <img class="fotoResultados" src="../imagens/apartamento1/1.png" alt="Apartamentos Praia">
+                    </a>
+                </div>
+            </div>
+            <div class="DivConteudo">
+                <a href="../html/resultadoselecao3.html" class="linkPag2">
+                    <h1>Apartamento Praia</h1>
+                </a>
+                <h2>Diaria: R$400,00</h2>
+                <h3>Balneário Camboriú SC</h3>
+                <p>Apartamento com vista pro mar</p>
+            </div>
+        </div>
+        <div class="result">
+            <div class="DivFotoResultados">
+                <div class="DivTamanhoFoto">
+                    <a href="../html/resultadoselecao3.html">
+                        <img class="fotoResultados" src="../imagens/casa1/1.png" alt="Casa de Inverno">
+                    </a>
+                </div>
+            </div>
+            <div class="DivConteudo">
+                <a href="../html/resultadoselecao3.html" class="linkPag2">
+                    <h1>Casa de Inverno</h1>
+                </a>
+                <h2>Diaria: R$300,00</h2>
+                <h3>Campos do Jordão SP</h3>
+                <p>Charmoso Chalé Duplex com duas suítes para até 4 adultos e 1 criança</p>
+            </div>
+        </div>
+    </div>
+    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <div id="rodape">
+        <ul class="rodape">
+            <li class="rodape">Tem Vaga Ai LTDA</li>
+            <li class="rodape">CNPJ: 11.111.0001-01</li>
+            <li class="rodape">Tel: (34)3333-4444</li>
+            <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
+        </ul>
+    </div>
+
+</body>
+
 </html>
