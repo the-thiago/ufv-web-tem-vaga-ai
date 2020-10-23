@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade Visual</title>
+    <link rel="stylesheet" href="css/IdentidadeVisual.css">
+</head>
+
+<body>
+
+    <!-- div  alerta do corona virus -->
+    <div id="aviso">
+        <div class="AvisoEsquerda" id="AvisoEsquerda">
+            <strong style="color: greenyellow;">!CONTEUDO DE AVISO!</strong>
+            COVID-2019: Seguimos todas as medidas de segurança à risca.
+            Saiba mais clicando
+            <a href="https://coronavirus.saude.gov.br/">aqui.</a>
+            <strong style="color: greenyellow;">!CONTEUDO DE AVISO!</strong>
+        </div>
+        <div class="AvisoDireita">
+            <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
+        </div>
+    </div>
+    <!-- div topo da pagina-->
+    <div id="cabecalho">
+        <a href="index.html">
+            <img id="logo" src="imagens/LOGO TEM VAGA AI.png" alt="logo">
+        </a>
+        <form action="html/paginaresultados2.html">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar...">
+        </form>
+        <form action="html/paginaresultados2.html">
+            <select id="Categorias" name="Categorias">
+                <option value="Chacaras">Chacaras</option>
+                <option value="Apartamentos">Apartamentos</option>
+                <option value="Ranchos Rios">Ranchos Rios</option>
+                <option value="Casas Beira Mar">Casas Beira Mar</option>
+            </select>
+            <select id="Cidades" name="Cidades">
+                <option value="Rio Paranaiba">Rio Paranaiba</option>
+                <option value="São Gotardo">São Gotardo</option>
+                <option value="Tres Marias">Tres Marias</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <ul id="BotoesMenu">
+            <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+            <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+            <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+        </ul>
+    </div>
+
+    <div class="ExternoCounteudoGenerico">
+        <div class="CounteudoGenerico">
+            <h1>Conteudo Generico</h1>
+        </div>
+    </div>
+
+    <div class="ExternoCounteudoTextoPuro">
+        <div class="CounteudoTextoPuro">
+            <div class="TextoPuro">
+                <h1>Conteudo TextoPuro</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit nullam, magna erat montes et primis efficitur
+                    cubilia felis ultricies, a donec sem venenatis ultrices quam non. Rhoncus magna porta class
+                    condimentum diam euismod quis lectus neque, dolor elementum vulputate fringilla accumsan tristique
+                    felis.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit nullam, magna erat montes et primis efficitur
+                    cubilia felis ultricies, a donec sem venenatis ultrices quam non. Rhoncus magna porta class
+                    condimentum diam euismod quis lectus neque, dolor elementum vulputate fringilla accumsan tristique
+                    felis. Velit class magnis pharetra vitae orci metus aliquet est blandit integer semper praesent leo
+                    molestie maecenas, duis sem elementum enim vel cursus dictum condimentum ante fermentum tristique
+                    congue natoque ultrices. Congue montes adipiscing himenaeos suspendisse tellus ex urna, cras
+                    vulputate vestibulum lectus fusce per libero, molestie dolor eu nostra torquent aenean. Elementum
+                    odio ligula commodo cursus ante pretium ridiculus hac accumsan facilisi, fusce mi semper consectetur
+                    ultricies eleifend eu congue efficitur dis, lectus inceptos netus mus magnis montes nascetur turpis
+                    finibus. Eget lacus placerat morbi nec condimentum quam tristique elementum luctus, penatibus
+                    euismod quisque integer dolor tortor lacinia consectetur, feugiat fringilla posuere curabitur
+                    gravida porttitor montes sapien.
+                    Facilisi quis convallis velit ornare fringilla praesent aptent magnis dis, felis integer urna eget
+                    blandit consectetur orci eros porta, tempus fermentum proin dui ad massa curae efficitur. Non aenean
+                    dignissim egestas proin elementum nam eu inceptos mollis, vehicula eros vitae cras senectus odio
+                    tincidunt nisl, ipsum magna ante sagittis massa etiam id aliquet. Massa duis porttitor venenatis
+                    tincidunt vehicula justo feugiat amet, neque purus cubilia fames vivamus mauris dapibus interdum,
+                    metus est porta varius ac quam curae. Finibus mus eros erat himenaeos ac amet mauris cursus, class
+                    fermentum aptent condimentum lorem nostra pretium convallis interdum, rhoncus nam torquent fames
+                    porta curabitur sapien. Habitant dui taciti tristique aptent euismod dictum placerat inceptos
+                    posuere, ante mus suspendisse ornare lectus gravida cursus amet rutrum, interdum vehicula maximus
+                    dolor commodo lorem imperdiet mi. Elementum nisl vehicula tincidunt ultrices tristique pretium
+                    ultricies erat justo, senectus non curae hac mollis aptent elit sodales, cubilia vitae magna
+                    porttitor fames sollicitudin montes aliquet.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="result">
+        <!-- Conteúdo de texto com imagem -->
+        <div class="DivFotoResultados">
+            <div class="DivTamanhoFoto">
+                <img class="fotoResultados" src="imagens/apartamento1/1.png" alt="Apartamentos Praia">
+            </div>
+        </div>
+        <div class="DivConteudo">
+            <h1>(Conteúdo de texto com imagem) Apartamento Praia</h1>
+            <h2>Diaria: R$400,00</h2>
+            <h3>Balneário Camboriú SC</h3>
+            <p>Apartamento com vista pro mar</p>
+        </div>
+    </div>
+
+    <div class="ExternoCounteudoGenerico">
+        <div class="CounteudoGenerico">
+            <h1>Modelos para elementos de entrada de dados</h1>
+            <textarea name="Texto" id="Texto" cols="50" rows="4">textarea. Texto. . .</textarea>
+
+            <br><br>
+
+            <div class="DivBotaoSelect">
+                <form action="#botao">
+                    <select id="SelectID" name="Select">
+                        <option value="Select">Select</option>
+                        <option value="Apartamentos">Apartamentos</option>
+                        <option value="Ranchos Rios">Ranchos Rios</option>
+                        <option value="Casas Beira Mar">Casas Beira Mar</option>
+                    </select>
+                    <br>
+                    <input type="submit" title="Botão" value="Botão" class="Botao">
+                </form>
+                <label class="container">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    CheckBox
+                </label>
+            </div>
+            <br>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <div id="rodape">
+        <ul class="rodape">
+            <li class="rodape">Tem Vaga Ai LTDA</li>
+            <li class="rodape">CNPJ: 11.111.0001-01</li>
+            <li class="rodape">Tel: (34)3333-4444</li>
+            <li class="rodape">Email:<a href="mailto:contato@temvagaai.com.br">contato@temvagaai.com.br</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
