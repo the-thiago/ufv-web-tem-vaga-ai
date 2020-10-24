@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identidade Visual</title>
     <link rel="stylesheet" href="css/IdentidadeVisual.css">
+    <script src="scripts/funcoes.js"></script>
 </head>
 
-<body>
+<body onload="showDivs()">
 
-    <!-- div  alerta do corona virus -->
+    <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
             <strong style="color: greenyellow;">!CONTEUDO DE AVISO!</strong>
@@ -28,22 +29,24 @@
         <a href="index.html">
             <img id="logo" src="imagens/LOGO TEM VAGA AI.png" alt="logo">
         </a>
-        <form action="html/paginaresultados2.html">
-            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar...">
+        <form action="html/paginaresultados2.html" form="entrada">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
         </form>
-        <form action="html/paginaresultados2.html">
-            <select id="Categorias" name="Categorias">
+
+        <form action="html/paginaresultados2.html" id="entrada">
+            <select id="Categorias" name="Categorias" form="entrada">
                 <option value="Chacaras">Chacaras</option>
                 <option value="Apartamentos">Apartamentos</option>
                 <option value="Ranchos Rios">Ranchos Rios</option>
                 <option value="Casas Beira Mar">Casas Beira Mar</option>
             </select>
-            <select id="Cidades" name="Cidades">
+            <select id="Cidades" name="Cidades" form="entrada">
                 <option value="Rio Paranaiba">Rio Paranaiba</option>
                 <option value="São Gotardo">São Gotardo</option>
                 <option value="Tres Marias">Tres Marias</option>
                 <option value="Rio de Janeiro">Rio de Janeiro</option>
             </select>
+
             <input type="submit">
         </form>
 
@@ -53,6 +56,19 @@
             <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
         </ul>
     </div>
+
+    <div>
+        <div id="slides-div" onload="carregarPagina();">
+            <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->
+            <img class="slide" src="imagens/banner1_500X600.png" alt="baner1">
+            <img class="slide" src="imagens/banner2_500X600.png" alt="baner2">
+            <img class="slide" src="imagens/banner3_500X600.png" alt="baner3">
+            <button class="botao-slide-esquerda" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="botao-slide-direita" onclick="plusDivs(1)">&#10095;</button>
+    
+        </div>
+    </div>
+    
 
     <div class="ExternoCounteudoGenerico">
         <div class="CounteudoGenerico">
@@ -98,7 +114,7 @@
             </div>
         </div>
     </div>
-
+    <br>
     <div class="result">
         <!-- Conteúdo de texto com imagem -->
         <div class="DivFotoResultados">
@@ -113,6 +129,7 @@
             <p>Apartamento com vista pro mar</p>
         </div>
     </div>
+    <br><br><br><br>
 
     <div class="ExternoCounteudoGenerico">
         <div class="CounteudoGenerico">
@@ -130,13 +147,19 @@
                         <option value="Casas Beira Mar">Casas Beira Mar</option>
                     </select>
                     <br>
-                    <input type="submit" title="Botão" value="Botão" class="Botao">
+                    <div class="botaoDiv">
+                        <input type="submit" title="Botão" value="Botão" class="Botao">
+                    </div>
+
+
                 </form>
                 <label class="container">
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                     CheckBox
                 </label>
+
+
             </div>
             <br>
         </div>
@@ -144,16 +167,22 @@
 
     </div>
 
+   <br><br><br><br>
+
+    <div class="slides-frame">
+        <div class="slides">
+          <div class="slide-1 slidess">Game of Thrones</div>
+          <div class="slide-2 slidess">Daenery Targaryen and her horse</div>
+          <div class="slide-3 slidess">Winer is comming, Stark</div>
+          <div class="slide-4 slidess">The Iron Throne</div>
+        </div>
+    </div>
 
 
 
 
 
-
-
-
-
-    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <!-- div de rodape-->
     <div id="rodape">
         <ul class="rodape">
             <li class="rodape">Tem Vaga Ai LTDA</li>

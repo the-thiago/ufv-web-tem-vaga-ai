@@ -31,7 +31,6 @@ div#aviso {
     float: left;
 }
 
-
 /* Cabecalho, topo menu*/
 div#cabecalho {
     display: flex;
@@ -46,7 +45,29 @@ img#logo{
 }
 img#logo{position:relative}
 img#logo:hover{top:-2px;box-shadow:0 5px 5px 3px black}
-
+.TextoPesquisar{
+    height: 35px;
+    border-radius: 15px;
+    width: 230px;
+    margin-right: 13px;
+}
+input[type=submit]{
+    background-color: white;
+    border: none;
+    color: #444;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-left: 10px;
+}
+input[type=submit]:hover{
+    background-color: #444; 
+    color: white;
+    border-radius: 10px;
+    border: white solid 1px;    
+}
 ul#BotoesMenu {
     list-style-type: none;
     padding: 15px;
@@ -100,14 +121,15 @@ ul.rodape {
     align-items: center;
     justify-content: center;    
     padding: 10px;
+    height: 150px;
 }
-.CounteudoGenerico { 
+.CounteudoGenerico {     
     background-color: Gainsboro;
     border-radius: 15px;
     width: 80%;
     text-align: center;  
     align-items: center;
-    justify-content: center; 
+    justify-content: center;     
 }
 
 /* Counteudo Texto Puro */
@@ -220,17 +242,15 @@ textarea{
 }
 select:hover {
     border-color: #888;
-    box-shadow: 5px 2px 5px 1px rgba(0,0,0,.04);
+    box-shadow: 5px 2px 5px 1px rgba(0,0,0,.04);    
 }
 select{
-    display: block;
     font-size: 13px;
     font-family: sans-serif;
     font-weight: 100;
     color: #444;
     line-height: 1.3;
     padding: .6em 1.4em .5em .8em;
-    width: 80%;
     box-sizing: border-box;
     margin: 0;
     border: 1px solid #aaa;
@@ -249,9 +269,7 @@ select{
     border: none;
     color: #444;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     border-radius: 10px;
     border: black solid 1px;
@@ -260,12 +278,16 @@ select{
     background-color:#363435; 
     color: white;
 }
+.botaoDiv{
+    padding-top: 10px;
+}
 /*Checkbox*/
 .container {
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
+    margin-left: 10px;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -313,3 +335,93 @@ select{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+
+  /* Slide de imagens Temporizado*/
+  div.slides-frame {
+    border: 3px solid #AAA;
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  div.slides {
+    -webkit-animation: slideUp 20s alternate infinite;
+    -moz-animation: slideUp 20s alternate infinite;
+    -o-animation: slideUp 20s alternate infinite;
+    animation: slideUp 20s alternate infinite;
+    position: relative;
+  }
+  div.slidess {
+    width: 640px;
+    height: 480px;
+    font-size: 0;
+  }
+  div.slide-1 {
+    background: url('../imagens/IdentidadeVisual/slide1.jpg');
+  }
+  div.slide-2 {
+    background: url('../imagens/IdentidadeVisual/slide2.jpg');
+  }
+  div.slide-3 {
+    background: url('../imagens/IdentidadeVisual/slide3.jpg');
+  }
+  div.slide-4 {
+    background: url('../imagens/IdentidadeVisual/slide4.jpg');
+  }
+  lesshat-selector {
+    -lh-property: 0; } 
+  @-webkit-keyframes slideUp{ 0% {bottom: 0 ;} 20% { bottom: 0; } 27% { bottom: 480px; } 47% { bottom: 480px; } 54% { bottom: 960px; } 74% { bottom: 960px; } 80% { bottom: 1440px; } 100% { bottom: 1440px; }}
+  @-moz-keyframes slideUp{ 0% {bottom: 0 ;} 20% { bottom: 0; } 27% { bottom: 480px; } 47% { bottom: 480px; } 54% { bottom: 960px; } 74% { bottom: 960px; } 80% { bottom: 1440px; } 100% { bottom: 1440px; }}
+  @-o-keyframes slideUp{ 0% {bottom: 0 ;} 20% { bottom: 0; } 27% { bottom: 480px; } 47% { bottom: 480px; } 54% { bottom: 960px; } 74% { bottom: 960px; } 80% { bottom: 1440px; } 100% { bottom: 1440px; }}
+  @keyframes slideUp{ 0% {bottom: 0 ;} 20% { bottom: 0; } 27% { bottom: 480px; } 47% { bottom: 480px; } 54% { bottom: 960px; } 74% { bottom: 960px; } 80% { bottom: 1440px; } 100% { bottom: 1440px; }}
+  [not-existing] {
+    zoom: 1;
+  }
+
+
+/* Slide de imagens com Botao*/
+.slide{     
+    width:100%;
+}
+
+.botao-slide-esquerda{
+    color: #fff!important;
+    background-color: #363435!important;
+    position: absolute;    
+    top: 43%;
+    left: 0%;
+    transform: translate(0%,-50%);;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    
+}
+.botao-slide-direita{
+    color: #fff!important;
+    background-color: #363435!important;
+    position: absolute;    
+    top: 43%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
