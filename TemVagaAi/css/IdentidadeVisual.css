@@ -19,7 +19,7 @@ div#aviso {
     width: 100%;
     background-color: #363435;
     color: white;
-    padding: 1px 0px 4px 0px;
+    padding: 8px 0px 8px 0px;
     text-align: center;
     display: flex;
 }

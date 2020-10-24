@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes - Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="../css/IdentidadeVisual.css">
     <link rel="stylesheet" href="../css/folhaDeEstiloPagina03.css">
     <script src="../scripts/funcoes.js"></script>
 </head>
 
 <body>
-    <!-- div  alerta do corona virus -->
+    <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
             COVID-2019: Seguimos todas as medidas de segurança à risca.
@@ -21,22 +22,23 @@
             <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
         </div>
     </div>
-    <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+    <!-- div topo da pagina-->
     <div id="cabecalho">
         <a href="../index.html">
             <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
         </a>
-        <form action="paginaresultados2.html">
-            <input type="text" id="pesuisa" name="pesquisa">
+        <form action="paginaresultados2.html" form="entrada">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
         </form>
-        <form action="paginaresultados2.html">
-            <select id="Categorias" name="Categorias">
+
+        <form action="paginaresultados2.html" id="entrada">
+            <select id="Categorias" name="Categorias" form="entrada">
                 <option value="Chacaras">Chacaras</option>
                 <option value="Apartamentos">Apartamentos</option>
                 <option value="Ranchos Rios">Ranchos Rios</option>
                 <option value="Casas Beira Mar">Casas Beira Mar</option>
             </select>
-            <select id="Cidades" name="Cidades">
+            <select id="Cidades" name="Cidades" form="entrada">
                 <option value="Rio Paranaiba">Rio Paranaiba</option>
                 <option value="São Gotardo">São Gotardo</option>
                 <option value="Tres Marias">Tres Marias</option>
@@ -75,9 +77,7 @@
             </div>
         </div>
         <div class="linha"></div>
-
         <!-- Aqui vai ter as informacoes da tela anterio + um campo de informacao grande-->
-
         <div id="grid-container">
             <div class="left">
                 <h1>Apartamento Praia</h1>
@@ -118,7 +118,7 @@
                     </div>
                     <div class="data-saida">
                         <form action="alugar.html">
-                            <label for="dFim"  class="label">Data Final:</label><br>
+                            <label for="dFim" class="label">Data Final:</label><br>
                             <input id="dateF" type="date"><br>
                         </form>
                     </div>
@@ -134,15 +134,18 @@
                 <h1>Ze sem Criatividade</h1>
                 <h2>18 anos.</h2>
                 <h3>Balneário Camboriú SC</h3>
-                <p>Gostei muito da casa, bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                <p>Gostei muito da casa, bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla
+                    blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla
+                    blabla bla blabla bla blabla bla blabla bla blabla bla bla
+                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla
+                    blabla bla blabla bla blabla bla blabla bla blabla bla bla
                 </p>
             </div>
         </div>
 
     </div>
-    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <!-- div de rodape-->
     <div id="rodape">
         <ul class="rodape">
             <li class="rodape">Tem Vaga Ai LTDA</li>

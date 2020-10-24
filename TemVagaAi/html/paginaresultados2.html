@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado de pesquisa - Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="../css/IdentidadeVisual.css">
     <link rel="stylesheet" href="../css/folhaDeEstiloPagina02.css">
     <script src="../scripts/funcoes.js"></script>
 </head>
 
 <body>
-    <!-- div  alerta do corona virus -->
+    <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
             COVID-2019: Seguimos todas as medidas de segurança à risca.
@@ -21,22 +22,23 @@
             <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
         </div>
     </div>
-    <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+    <!-- div topo da pagina-->
     <div id="cabecalho">
         <a href="../index.html">
             <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
         </a>
-        <form action="paginaresultados2.html">
-            <input type="text" id="pesuisa" name="pesquisa">
+        <form action="paginaresultados2.html" form="entrada">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
         </form>
-        <form action="paginaresultados2.html">
-            <select id="Categorias" name="Categorias">
+
+        <form action="paginaresultados2.html" id="entrada">
+            <select id="Categorias" name="Categorias" form="entrada">
                 <option value="Chacaras">Chacaras</option>
                 <option value="Apartamentos">Apartamentos</option>
                 <option value="Ranchos Rios">Ranchos Rios</option>
                 <option value="Casas Beira Mar">Casas Beira Mar</option>
             </select>
-            <select id="Cidades" name="Cidades">
+            <select id="Cidades" name="Cidades" form="entrada">
                 <option value="Rio Paranaiba">Rio Paranaiba</option>
                 <option value="São Gotardo">São Gotardo</option>
                 <option value="Tres Marias">Tres Marias</option>
@@ -51,7 +53,7 @@
             <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
         </ul>
     </div>
-    <!-- div resultados essa parte vai ter uma imagem na esquerda e informacoes na direita e o nome sera-->
+    <!-- div resultados essa parte vai ter uma imagem na esquerda e informacoes na direita-->
     <div id="resultados">
         <div class="result">
             <div class="DivFotoResultados">
@@ -91,7 +93,7 @@
             <div class="DivFotoResultados">
                 <div class="DivTamanhoFoto">
                     <a href="../html/resultadoselecao3.html">
-                        <img class="fotoResultados" src="../imagens/casa1/1.png" alt="Casa de Inverno">
+                        <img class="fotoResultados" src="../imagens/casa1/6.jpg" alt="Casa de Inverno">
                     </a>
                 </div>
             </div>
@@ -105,7 +107,7 @@
             </div>
         </div>
     </div>
-    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <!-- div de rodape-->
     <div id="rodape">
         <ul class="rodape">
             <li class="rodape">Tem Vaga Ai LTDA</li>

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="css/IdentidadeVisual.css">
     <link rel="stylesheet" href="css/folhaDeEstiloPagina01.css">
     <script src="scripts/funcoes.js"></script>
 </head>
 
 <body onload="showDivs()">
-    <!-- div  alerta do corona virus -->
+    <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
             COVID-2019: Seguimos todas as medidas de segurança à risca.
@@ -21,28 +22,29 @@
             <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
         </div>
     </div>
-    <!-- div cabecalho onde fica os trem do cabecalho nao muda-->
+    <!-- div topo da pagina-->
     <div id="cabecalho">
         <a href="index.html">
             <img id="logo" src="imagens/LOGO TEM VAGA AI.png" alt="logo">
         </a>
-        <form action="html/paginaresultados2.html">
-            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar...">
+        <form action="html/paginaresultados2.html" form="entrada">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
         </form>
-        <form action="html/paginaresultados2.html">
-            <select id="Categorias" name="Categorias">
+
+        <form action="html/paginaresultados2.html" id="entrada">
+            <select id="Categorias" name="Categorias" form="entrada">
                 <option value="Chacaras">Chacaras</option>
                 <option value="Apartamentos">Apartamentos</option>
                 <option value="Ranchos Rios">Ranchos Rios</option>
                 <option value="Casas Beira Mar">Casas Beira Mar</option>
             </select>
-            <select id="Cidades" name="Cidades">
+            <select id="Cidades" name="Cidades" form="entrada">
                 <option value="Rio Paranaiba">Rio Paranaiba</option>
                 <option value="São Gotardo">São Gotardo</option>
                 <option value="Tres Marias">Tres Marias</option>
                 <option value="Rio de Janeiro">Rio de Janeiro</option>
             </select>
-            <input type="submit" class="Botao">
+            <input type="submit">
         </form>
 
         <ul id="BotoesMenu">
@@ -86,7 +88,7 @@
             </div>
         </div>
     </div>
-    <!-- div de rodape onde colocara as informacao do roda pe-->
+    <!-- div de rodape-->
     <div id="rodape">
         <ul class="rodape">
             <li class="rodape">Tem Vaga Ai LTDA</li>
