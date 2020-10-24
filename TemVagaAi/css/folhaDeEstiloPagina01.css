@@ -1,17 +1,20 @@
-body{
+body {
     font-family: inherit, 'Open Sans', sans-serif;
     margin: 0;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
-    color: black;    
+    color: black;
 }
 
-/* Aviso Covid */ 
+/* Aviso Covid */
+
 div#aviso {
     width: 100%;
     background-color: #363435;
@@ -21,28 +24,30 @@ div#aviso {
     display: flex;
 }
 
-.AvisoEsquerda{
+.AvisoEsquerda {
     width: 95.00%;
     float: left;
 }
 
-.AvisoDireita{
+.AvisoDireita {
     width: 5.00%;
     float: left;
 }
 
 /* Slide de imagens */
-.slide{     
-    width:100%;
+
+.slide {
+    width: 100%;
 }
 
-.botao-slide-esquerda{
+.botao-slide-esquerda {
     color: #fff!important;
     background-color: #363435!important;
-    position: absolute;    
+    position: absolute;
     top: 43%;
     left: 0%;
-    transform: translate(0%,-50%);;
+    transform: translate(0%, -50%);
+    ;
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -54,15 +59,15 @@ div#aviso {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    
 }
-.botao-slide-direita{
+
+.botao-slide-direita {
     color: #fff!important;
     background-color: #363435!important;
-    position: absolute;    
+    position: absolute;
     top: 43%;
     right: 0%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -77,6 +82,7 @@ div#aviso {
 }
 
 /* Cabecalho, topo menu*/
+
 div#cabecalho {
     display: flex;
     background-color: #682A2C;
@@ -85,7 +91,8 @@ div#cabecalho {
     align-items: center;
     padding: 5px;
 }
-img#logo{
+
+img#logo {
     padding-right: 12px;
 }
 
@@ -99,29 +106,30 @@ ul#BotoesMenu {
 li.Menu {
     display: inline;
     padding: 27px 10px 37px 10px;
-    
 }
-a.Menu{
+
+a.Menu {
     text-decoration: none;
     color: white;
     padding: 27px 10px 37px 10px;
-    
 }
 
-li.Menu a:hover{
+li.Menu a:hover {
     text-decoration: none;
-    color: black;  
+    color: black;
     padding: 27px 10px 37px 10px;
     background-color: white;
 }
 
 /* Comentarios de Clientes */
-div#grid-container{
+
+div#grid-container {
     margin-top: 10px;
     display: flex;
     background-color: white;
 }
-.left, .middle, .right{
+
+.left, .middle, .right {
     border-width: 1px;
     border-color: black;
     border-radius: 15px;
@@ -133,8 +141,8 @@ div#grid-container{
     color: black;
 }
 
-
 /* Rodapé */
+
 div#rodape {
     background-color: #682A2C;
     color: white;

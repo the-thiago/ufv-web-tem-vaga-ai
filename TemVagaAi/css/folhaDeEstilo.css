@@ -1,17 +1,20 @@
-body{
+body {
     font-family: inherit, 'Open Sans', sans-serif;
     margin: 0;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
-    color: black;    
+    color: black;
 }
 
-/* Aviso Covid */ 
+/* Aviso Covid */
+
 div#aviso {
     width: 100%;
     background-color: #363435;
@@ -21,28 +24,30 @@ div#aviso {
     display: flex;
 }
 
-.AvisoEsquerda{
+.AvisoEsquerda {
     width: 95.00%;
     float: left;
 }
 
-.AvisoDireita{
+.AvisoDireita {
     width: 5.00%;
     float: left;
 }
 
 /* Slide de imagens */
-.slide{     
-    width:100%;
+
+.slide {
+    width: 100%;
 }
 
-.botao-slide-esquerda{
+.botao-slide-esquerda {
     color: #fff!important;
     background-color: #363435!important;
-    position: absolute;    
+    position: absolute;
     top: 43%;
     left: 0%;
-    transform: translate(0%,-50%);;
+    transform: translate(0%, -50%);
+    ;
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -54,15 +59,15 @@ div#aviso {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    
 }
-.botao-slide-direita{
+
+.botao-slide-direita {
     color: #fff!important;
     background-color: #363435!important;
-    position: absolute;    
+    position: absolute;
     top: 43%;
     right: 0%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -77,6 +82,7 @@ div#aviso {
 }
 
 /* Cabecalho, topo menu*/
+
 div#cabecalho {
     display: flex;
     background-color: #682A2C;
@@ -85,7 +91,8 @@ div#cabecalho {
     align-items: center;
     padding: 5px;
 }
-img#logo{
+
+img#logo {
     padding-right: 12px;
 }
 
@@ -99,27 +106,28 @@ ul#BotoesMenu {
 li.Menu {
     display: inline;
     padding: 27px 10px 37px 10px;
-    
 }
-a.Menu{
+
+a.Menu {
     text-decoration: none;
     color: white;
     padding: 27px 10px 37px 10px;
-    
 }
 
-li.Menu a:hover{
+li.Menu a:hover {
     text-decoration: none;
-    color: black;  
+    color: black;
     padding: 27px 10px 37px 10px;
     background-color: white;
 }
 
 /* Comentarios de Clientes */
-div#grid-container{
+
+div#grid-container {
     display: flex;
 }
-.left, .middle, .right{
+
+.left, .middle, .right {
     border-width: 1px;
     border-color: black;
     border-radius: 1px;
@@ -128,8 +136,8 @@ div#grid-container{
     padding: 25px;
 }
 
-
 /* Rodapé */
+
 div#rodape {
     background-color: #682A2C;
     color: white;
@@ -151,8 +159,10 @@ ul.rodape {
 }
 
 /* PAGINA 02 */
+
 /* resultados */
-div.result{
+
+div.result {
     /*
     display: flex;
     margin: 0 auto;
@@ -161,10 +171,9 @@ div.result{
     width: 100%;
     margin: 13px 0px;
     background-color: rgb(212, 203, 203);
-    
 }
 
-div.DivFotoResultados{
+div.DivFotoResultados {
     box-sizing: content-box;
     border-radius: 4px;
     -webkit-flex-shrink: 0;
@@ -180,7 +189,8 @@ div.DivFotoResultados{
     padding-left: 50px;
     max-width: 10;*/
 }
-div.DivConteudo{
+
+div.DivConteudo {
     width: -webkit-calc(100% - 208px);
     width: calc(100% - 208px);
     display: -webkit-flex;
@@ -188,27 +198,23 @@ div.DivConteudo{
     -webkit-flex-direction: column;
     flex-direction: column;
     padding: 10px;
-
-    
 }
 
-img{
+img {
     max-width: 100%;
     max-height: 100%;
-    
 }
-div.fotoResultados{
+
+div.fotoResultados {
     align-items: center;
     width: 100px;
     height: 100px;
 }
 
-
-/* Estilo do slide, pagina 3 */ 
+/* Estilo do slide, pagina 3 */
 
 .slides-list {
     --total-items: 4;
-
     /*remove os estilos da lista*/
     list-style-type: none;
     padding: 0px;
@@ -221,44 +227,51 @@ div.fotoResultados{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-
-    
     width: calc(var(--total-items) * 100%);
-
-
     position: relative;
     left: 0%;
-
     --selected-item: 0;
-    
     position: relative;
     left: calc(var(--selected-item) * -100%);
-
     transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    
 }
-.slide-show{
-    height: 550px;    
+
+.slide-show {
+    height: 550px;
     overflow: hidden;
     background-color: black;
 }
 
-.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
-.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
-.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
-.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
-
-.DivImagensSlide{    
-    text-align: center;  
-    background-color: black;  
+.slide-controller:nth-child(1):checked~.slide-show .slides-list {
+    --selected-item: 0;
 }
-.botoes-slides{
+
+.slide-controller:nth-child(2):checked~.slide-show .slides-list {
+    --selected-item: 1;
+}
+
+.slide-controller:nth-child(3):checked~.slide-show .slides-list {
+    --selected-item: 2;
+}
+
+.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+    --selected-item: 3;
+}
+
+.DivImagensSlide {
+    text-align: center;
+    background-color: black;
+}
+
+.botoes-slides {
     padding: 5px;
 }
-.linha{
+
+.linha {
     background-color: black;
     height: 30px;
 }
-.slide-controller{
+
+.slide-controller {
     margin: 10px;
 }
