@@ -102,31 +102,29 @@
                 </p>
             </div>
             <div class="middle">
-                <div class="duvida">
-                    <form action="retorno.html">
-                        <textarea name="mensagem" id="Mensagens" rows="10" placeholder="Envie sua duvida:"></textarea>
-                        <br>
-                        <input type="submit" value="enviar">
-                    </form>
-                </div>
                 <div class="datas">
                     <div class="data-chegada">
-                        <form action="alugar.html">
-                            <label for="dtIncio" class="label">Data de Chegada:</label><br>
-                            <input id="dateI" type="date"><br>
+                        <form action="alugar.html" class="datas-form">
+                            <label for="dtIncio" class="label-data"><strong>Data de Chegada</strong></label>
+                            <input id="dateI" type="date" class="inputdate">
                         </form>
                     </div>
                     <div class="data-saida">
-                        <form action="alugar.html">
-                            <label for="dFim" class="label">Data Final:</label><br>
-                            <input id="dateF" type="date"><br>
+                        <form action="alugar.html" class="datas-form">
+                            <label for="dFim" class="label-data"><strong>Data Final</strong></label>
+                            <input id="dateF" type="date" class="inputdate">
                         </form>
                     </div>
-
                 </div>
-
                 <div class="botao-alugar">
-                    <input id="botao-alugar" type="submit" value="Alugar">
+                    <input id="botao-alugar" type="submit" value="Alugar" class="cor-botao">
+                </div>
+                <div class="duvida">
+                    <form action="#retorno" id="duvida">
+                        <textarea name="mensagem" id="Mensagens" rows="2" placeholder="Envie sua duvida:"></textarea>
+
+                        <input type="submit" value="Enviar" id="botao-duvida" class="cor-botao">
+                    </form>
                 </div>
             </div>
             <div class="right">

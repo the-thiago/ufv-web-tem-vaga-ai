@@ -91,7 +91,12 @@ div#grid-container {
     margin-left: 25px;
 }
 
-.middle {}
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .right {
     margin-right: 25px;
@@ -99,36 +104,130 @@ div#grid-container {
 
 /* Mexendo com as 3 divs do final da pagina */
 
-.duvida {}
-
-.datas {
-    height: 150px;
-}
-
 .botao-alugar {
     text-align: center;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 199, 199);
+    margin-bottom: 2%;
+    border-radius: 0px 0px 15px 15px;
+    /*border: black 1px solid;
+    border-top: none;*/
 }
 
 #botao-alugar {
-    width: 70%;
-    height: 40px;
+    width: 80%;
 }
 
-.data-chegada {
-    padding-left: 15px;
+.datas {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 199, 199);
+    border-radius: 15px 15px 0px 0px;
+    /*border: black 0.5px solid;
+    border-bottom: none;*/
 }
 
-.data-saida {
-    padding-left: 15px;
+.duvida {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #Mensagens {
-    width: 99%;
-    height: 150px;
+    width: 100%;
+    height: 66%;
+    border-radius: 15px;
+    padding: 2%;
 }
 
-.duvida {}
+#botao-duvida {
+    margin-top: 2%;
+    width: 30%;
+    height: 33%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 
-.label {
-    font-size: 23px;
+textarea {
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type=submit]#botao-duvida {
+    padding: 15px 0px 15px 0px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#duvida {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-chegada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    size: 35%;
+    font-size: 20pt;
+}
+
+.data-saida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    size: 35%;
+    font-size: 20pt;
+}
+
+.datas-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputdate {
+    font-size: 15pt;
+    border-radius: 10px;
+    margin: 5pt;
+    padding: 5pt;
+    margin-top: 10pt;
+}
+
+.label-data {
+    margin-top: 15pt;
+    font: bold;
+    font: str;
+}
+
+input[type=submit].cor-botao:hover {
+    background-color: white;
+    color: #444;
+    border: black 1px solid;
+}
+
+input[type=submit].cor-botao {
+    background-color: #444;
+    color: white;
 }
