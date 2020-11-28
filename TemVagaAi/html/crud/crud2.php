@@ -9,20 +9,28 @@ if($_GET['mode'] == 'exclude'){
     $conn->close();
 
 }else if($_POST['mode'] == 'insert'){
-    $nome = $_POST['nome'];
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
     $email = $_POST['email'];
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
 
-    $sql = "INSERT INTO Usuario (nome, email) VALUES ('$nome', '$email')";
+    $sql = "INSERT INTO Usuario (usuario, senha, email, nome, telefone)
+            VALUES ('$usuario', '$senha', '$email', '$nome', '$telefone')";
     $conn->query($sql);
     $conn->close();
 
 }else if($_POST['mode'] == 'update'){
 
     $id = $_POST['id'];
-    $nome = $_POST['nome'];
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
     $email = $_POST['email'];
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
 
-    $sql = "UPDATE Usuario SET nome='$nome', email='$email' WHERE id='$id'";
+    $sql = "UPDATE Usuario SET usuario='$usuario', senha='$senha', email='$email',
+                    nome='$nome', telefone='$telefone' WHERE id='$id'";
     $conn->query($sql);
     $conn->close();
 }
