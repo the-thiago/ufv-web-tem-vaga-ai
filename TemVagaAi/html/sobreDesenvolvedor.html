@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Tem Vaga Ai!</title>
+    <link rel="stylesheet" href="../css/IdentidadeVisual.css">
+    <link rel="stylesheet" href="../css/folhaDeEstiloSobreDesenvolvedor.css">
+    <script src="../scripts/funcoes.js"></script>
+</head>
+
+<body>
+    <!-- div aviso do covid-19 -->
+    <div id="aviso">
+        <div class="AvisoEsquerda" id="AvisoEsquerda">
+            COVID-2019: Seguimos todas as medidas de segurança à risca.
+            Saiba mais clicando
+            <a href="https://coronavirus.saude.gov.br/">aqui.</a>
+        </div>
+        <div class="AvisoDireita">
+            <button id="BotaoAvisoCovid" onclick="fecharAvisoCovid()">X</button>
+        </div>
+    </div>
+    <!-- div topo da pagina-->
+    <div id="cabecalho">
+        <a href="../index.html">
+            <img id="logo" src="../imagens/LOGO TEM VAGA AI.png" alt="logo">
+        </a>
+        <form action="paginaresultados2.html" form="entrada">
+            <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
+        </form>
+
+        <form action="paginaresultados2.html" id="entrada">
+            <select id="Categorias" name="Categorias" form="entrada">
+                <option value="Chacaras">Chacaras</option>
+                <option value="Apartamentos">Apartamentos</option>
+                <option value="Ranchos Rios">Ranchos Rios</option>
+                <option value="Casas Beira Mar">Casas Beira Mar</option>
+            </select>
+            <select id="Cidades" name="Cidades" form="entrada">
+                <option value="Rio Paranaiba">Rio Paranaiba</option>
+                <option value="São Gotardo">São Gotardo</option>
+                <option valuees Marias/option>
+                <option value="Rio de Janeiro"="Tres Marias">Tr>Rio de Janeiro</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <ul id="BotoesMenu">
+            <li class="Menu"> <a class="Menu" href="#historico">Historico</a> </li>
+            <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
+            <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+        </ul>
+    </div>
+
+
+    
+    <div class="ExternoCounteudoTextoPuro">
+        <div class="CounteudoTextoPuro">
+            <div class="TextoPuro">
+                <div id="sobre">
+                    <h1 id="sobreTitulo">TR Desenvolvimentos</h1>
+                    <p id="sobreTexto">
+                        <h1 id = "prog">Rodrigo de Oliveira Costa<br></h1>
+                        <p>
+                            Matricula 2746<br>
+                            Turna: Noturno<br> 
+                            github: https://github.com/rodrigo-UFV-2746<br> 
+                            E-mail: rodrigo.o.costa@ufv.br<br> 
+                        </p>
+                        <h1 id = "prog">Thiago Moreira de Souza<br></h1>
+                        <p>
+                            Matricula 6011<br>
+                            Turna: Noturno<br> 
+                            github: https://github.com/the-thiago<br>
+                            E-mail: thiago@ufv.br<br>  
+                        </p>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- div de rodape-->
+    <div id="rodape">
+        <ul class="rodape">
+            <li class="rodape">Sobre</li>
+            <li class="rodape"><a href="sobreTemVagaAi.html">Tem Vaga Ai</a></li> 
+            <li class="rodape"><a href="sobreDesenvolvedor.html">Desenvolvido</a></li> 
+        </ul>
+    </div>
+
+</body>
+
+</html>
