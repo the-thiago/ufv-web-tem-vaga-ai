@@ -45,8 +45,8 @@
 
         <ul id="BotoesMenu">
             <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
-            <li class="Menu"> <a class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema1</a> </li>
-            <li class="Menu"> <a class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema2</a> </li>
+            <li class="Menu"> <a class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','../css/folhaDeEstiloPagina03.css')">Tema1</a> </li>
+            <li class="Menu"> <a class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','../css/folhaDeEstiloPagina03Stile02.css')">Tema2</a> </li>
         </ul>
     </div>
     <div class="Resultados">
