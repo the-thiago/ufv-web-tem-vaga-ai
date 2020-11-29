@@ -3,7 +3,6 @@ function test_input($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-    echo "to aqui!";
     return $data;
 }
 function usuarioSenhaValidos($usuario, $senha){

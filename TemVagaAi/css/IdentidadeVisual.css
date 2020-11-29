@@ -175,11 +175,66 @@ ul.rodape {
 
 /* Conteudo de texto com imagem */
 
+#botaoTopo{
+    margin-left: 8px;
+    background-color: white;
+    border: none;
+    color: #444;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-left: 10px;
+}
+#botaoTopo:hover{
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    border: white solid 1px;
+}
+.btnVerMaisInfos{
+    margin-left: 8px;
+    background-color: white;
+    border: none;
+    color: #444;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-left: 10px;
+
+}
+.btnVerMaisInfos:hover{
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    border: white solid 1px;
+}
+
+.btnVerMaisInfos{    
+    padding: 15px 30px;
+}
+.divVerMaisInfos{
+    background-color: lightgray;
+    padding-bottom: 10px;
+    
+}
+.verMaisInfos{
+    margin: 0 auto;
+    width: 0%; /* Valor da Largura */
+}
+
+
 div.result {
     display: flex;
     width: 100%;
-    margin: 13px 0px;
+    margin: 13px 0px 0px 0 px;
     background-color: lightgray;
+}
+div.cadaResultado {
+    margin-bottom: 20px;
 }
 
 div.DivFotoResultados {
