@@ -15,3 +15,6 @@ td.list, th.list{
 td.action{
     width: 2px;
 }
+h3.obrigatorio{
+    color: lightcoral;
+}

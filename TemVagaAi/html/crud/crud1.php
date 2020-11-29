@@ -19,16 +19,16 @@
                 var nome = document.getElementById('nome');
                 var telefone = document.getElementById('telefone');
 
-                if(usuario.length > 25){
-                    erros += "Tamanho de 'usuario' é maior que 25!\n";
+                if(usuario.length > 25 || usuario.length == 0){
+                    erros += "Tamanho invalido para usuario!\n";
                     teveErro = true;
-                } else if(senha.length > 50){
-                    erros += "Tamanho de 'senha' é maior que 50!\n";
+                } else if(senha.length > 50 || senha.length == 0){
+                    erros += "Tamanho invalido para senha!\n";
                     teveErro = true;
-                } else if(email.length > 80){
-                    erros += "Tamanho de 'email' é maior que 80!\n";
+                } else if(email.length > 80 || email.length == 0){
+                    erros += "Tamanho invalido para email!\n";
                     teveErro = true;
-                } else if(nome.length > 250){
+                } else if(nome.length > 250 ){
                     erros += "Tamanho de 'nome' é maior que 250!\n";
                     teveErro = true;
                 } else if(telefone.length > 11){
@@ -38,7 +38,7 @@
                 if(teveErro == false){
                     document.getElementById('f1').submit();
                 } else {
-                    alert("Tente novamente.\n" + erros);
+                    alert(erros);
                 }
             }
         }
@@ -56,6 +56,7 @@
 </head>
 <body>
 
+<h3 class="obrigatorio">*E-mail deve ser único, usuario e senha são obrigatórios. Telefone apenas números e no máximo 11 números.</h3>
 <form action="crud2.php" method="post" id="f1" name="f1">
 <?php
     include('connect.php');
