@@ -18,3 +18,10 @@ td.action{
 h3.obrigatorio{
     color: lightcoral;
 }
+div#formInserir{
+    text-align: center;
+    width: 100%;
+}
+div#formInserirInterna{
+    display: inline-block;
+}
