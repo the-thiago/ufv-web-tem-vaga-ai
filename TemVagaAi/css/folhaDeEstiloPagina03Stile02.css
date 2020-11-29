@@ -1,0 +1,233 @@
+/* resultadoselecao.html - Pagina 03 */
+
+.slides-list {
+    --total-items: 4;
+    /*remove os estilos da lista*/
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    /* 
+      deixa todos os itens da lista
+      na horizontal e todos com a
+      mesma largura
+    */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: calc(var(--total-items) * 100%);
+    position: relative;
+    left: 0%;
+    --selected-item: 0;
+    position: relative;
+    left: calc(var(--selected-item) * -100%);
+    transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.slide-show {
+    height: 550px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.slide-controller:nth-child(1):checked~.slide-show .slides-list {
+    --selected-item: 0;
+}
+
+.slide-controller:nth-child(2):checked~.slide-show .slides-list {
+    --selected-item: 1;
+}
+
+.slide-controller:nth-child(3):checked~.slide-show .slides-list {
+    --selected-item: 2;
+}
+
+.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+    --selected-item: 3;
+}
+
+.DivImagensSlide {
+    text-align: center;
+    background-color: black;
+}
+
+.botoes-slides {
+    padding: 5px;
+}
+
+.linha {
+    background-color: black;
+    height: 30px;
+}
+
+.slide-controller {
+    margin: 10px;
+}
+
+.Resultados {
+    margin-top: 10px;
+}
+
+/* Comentarios de Clientes */
+
+div#grid-container {
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+}
+
+.left, .middle, .right {
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+    float: left;
+    width: 33.33%;
+    margin: 15px;
+    padding: 15px;
+    background-color: Gainsboro;
+    color: black;
+}
+
+.left {
+    margin-left: 25px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    margin-right: 25px;
+}
+
+/* Mexendo com as 3 divs do final da pagina */
+
+.botao-alugar {
+    text-align: center;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 199, 199);
+    margin-bottom: 2%;
+    border-radius: 0px 0px 15px 15px;
+    /*border: black 1px solid;
+    border-top: none;*/
+}
+
+#botao-alugar {
+    width: 80%;
+}
+
+.datas {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 199, 199);
+    border-radius: 15px 15px 0px 0px;
+    /*border: black 0.5px solid;
+    border-bottom: none;*/
+}
+
+.duvida {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Mensagens {
+    width: 100%;
+    height: 66%;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+#botao-duvida {
+    margin-top: 2%;
+    width: 30%;
+    height: 33%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+textarea {
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type=submit]#botao-duvida {
+    padding: 15px 0px 15px 0px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#duvida {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-chegada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    size: 35%;
+    font-size: 20pt;
+}
+
+.data-saida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    size: 35%;
+    font-size: 20pt;
+}
+
+.datas-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputdate {
+    font-size: 15pt;
+    border-radius: 10px;
+    margin: 5pt;
+    padding: 5pt;
+    margin-top: 10pt;
+}
+
+.label-data {
+    margin-top: 15pt;
+    font: bold;
+    font: str;
+}
+
+input[type=submit].cor-botao:hover {
+    background-color: white;
+    color: #444;
+    border: black 1px solid;
+}
+
+input[type=submit].cor-botao {
+    background-color: #444;
+    color: white;
+}

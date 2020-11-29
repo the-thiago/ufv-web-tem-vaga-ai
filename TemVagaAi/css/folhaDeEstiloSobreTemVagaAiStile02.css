@@ -1,0 +1,22 @@
+div.TextoPuro{
+    min-height: 720px;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    text-align: center;
+}
+#sobreTitulo{
+    margin: 0;
+    padding-bottom: 3%;
+    font-size: 80px;
+}
+#sobreTexto{
+    margin: 0;
+
+}
+#sobre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

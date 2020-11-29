@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tem Vaga Ai!</title>
-    <link rel="stylesheet" href="css/IdentidadeVisual.css">
-    <link rel="stylesheet" href="css/folhaDeEstiloPagina01.css">
+    <link id="temaPrincipal" rel="stylesheet" href="css/IdentidadeVisual.css">
+    <link id="temaSecundario" rel="stylesheet" href="css/folhaDeEstiloPagina01.css">
     <script src="scripts/funcoes.js"></script>
 </head>
 
@@ -49,8 +49,8 @@
 
         <ul id="BotoesMenu">
             <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
-            <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
-            <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+            <li class="Menu"> <a class="Menu"  onclick="trocaCss('css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema1</a> </li>
+            <li class="Menu"> <a class="Menu" onclick="trocaCss('css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema2</a> </li>
         </ul>
     </div>
     <!--div principal informacoes que muda toda as paginas-->

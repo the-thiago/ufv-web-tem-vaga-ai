@@ -18,3 +18,7 @@ x[slideIndex-1].style.display = "block";
 function fecharAvisoCovid(){
 document.getElementById("aviso").style.display = 'none';                
 }  
+function trocaCss(cssPrincipal,cssSecundario){
+    document.getElementById('temaPrincipal').setAttribute("href", cssPrincipal);
+    document.getElementById('temaSecundario').setAttribute("href", cssSecundario);
+}
