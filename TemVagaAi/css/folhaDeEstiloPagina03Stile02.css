@@ -72,7 +72,7 @@
 div#grid-container {
     margin-top: 10px;
     display: flex;
-    background-color: white;
+    background-color: rgb(8, 8, 8);
 }
 
 .left, .middle, .right {
