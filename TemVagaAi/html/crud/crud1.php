@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../css/folhaDeEstiloCadastroCRUD.css">
     <script src="../../scripts/funcoes.js"></script>
     <script>
+        function resultadosVagas(){
+            document.getElementById('entrada').submit();
+        }
         function fnSubmit(){
             /*
             var continuar = confirm("Clique em 'Ok', para confirmar as alterações.");
@@ -79,31 +82,21 @@
 <div id="cabecalho">
     <a href="../../index.html">
         <img id="logo" src="../../imagens/LOGO TEM VAGA AI.png" alt="logo">
-    </a>
-    <form action="../../html/paginaresultados2.html" form="entrada">
-        <input type="text" id="pesuisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
-    </form>
+    </a>        
 
-    <form action="../../html/paginaresultados2.html" id="entrada">
-        <select id="Categorias" name="Categorias" form="entrada">
-            <option value="Chacaras">Chacaras</option>
-            <option value="Apartamentos">Apartamentos</option>
-            <option value="Ranchos Rios">Ranchos Rios</option>
-            <option value="Casas Beira Mar">Casas Beira Mar</option>
+    <form action="../../html/paginaresultados2.php" id="entrada" method="POST">
+        <input type="text" id="pesquisa" name="pesquisa" placeholder="Buscar..." class="TextoPesquisar">
+        <select id="cidade" name="cidade" form="entrada">
+            <option selected value="qualquer">Qualquer localização</option>
+            <option value="rio">Rio Paranaiba</option>                
         </select>
-        <select id="Cidades" name="Cidades" form="entrada">
-            <option value="Rio Paranaiba">Rio Paranaiba</option>
-            <option value="São Gotardo">São Gotardo</option>
-            <option value="Tres Marias">Tres Marias</option>
-            <option value="Rio de Janeiro">Rio de Janeiro</option>
-        </select>
-        <input type="submit">
+        <input type='button' onclick='resultadosVagas();' value='Buscar' id="botaoTopo"> 
     </form>
 
     <ul id="BotoesMenu">
         <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
-        <li class="Menu"> <a class="Menu" href="#AvisosMensagens">Avisos e Mensagens</a> </li>
-        <li class="Menu"> <a class="Menu" href="#Login">Login</a> </li>
+        <li class="Menu"> <a class="Menu"  onclick="trocaCss('css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
+        <li class="Menu"> <a class="Menu" onclick="trocaCss('css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
     </ul>
 </div>
 

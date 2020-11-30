@@ -12,9 +12,9 @@
         function resultadosVagas(){
             document.getElementById('entrada').submit();
         }
-        function verMaisInfos(){
-            document.getElementById('verMaisInfos').submit();
-        }  
+        function verMaisInfos(id){
+            document.getElementById('verMaisInfos'+id).submit();
+        }
     </script>
 </head>
 
@@ -48,8 +48,8 @@
 
         <ul id="BotoesMenu">
             <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
-            <li class="Menu"> <a class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema1</a> </li>
-            <li class="Menu"> <a class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema2</a> </li>
+            <li class="Menu"> <a class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
+            <li class="Menu"> <a class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
         </ul>
     </div>
     <?php    // Mantem a pesquisa antiga para possivel edição
@@ -94,6 +94,7 @@
             <div id='resultados' class='cadaResultado'>            
             ";
             while($row = $result->fetch_assoc()){
+                $id = $row['id'];
                 $nome = $row['nome'];
                 $descricao = $row['descricao'];
                 $diaria = $row['diaria'];
@@ -119,8 +120,9 @@
                         </div>
                     </div>  
                     <div class='divVerMaisInfos' id='divVerMaisInfos'>
-                        <form action='resultadoselecao3.php' id='verMaisInfos' class='verMaisInfos' method='GET'>        
-                            <input type='button' class='btnVerMaisInfos' id='btnVerMaisInfos 'onclick='verMaisInfos();' value='Alugue!'> 
+                        <form action='resultadoselecao3.php' id='verMaisInfos$id' class='verMaisInfos' method='GET'>        
+                            <input type='hidden' id='id' name='id' value=$id>
+                            <input type='button' class='btnVerMaisInfos' id='btnSubmit$id' name='btnSubmit$id' onclick='verMaisInfos($id);' value='Alugue!'> 
                         </form>
                     </div>
                 </div>              
