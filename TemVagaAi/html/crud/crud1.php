@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Tem Vaga Ai!</title>
-    <link rel="stylesheet" href="../../css/IdentidadeVisual.css">
-    <link rel="stylesheet" href="../../css/folhaDeEstiloCadastroCRUD.css">
+    <link id="temaPrincipal" rel="stylesheet" href="../../css/IdentidadeVisual.css">
+    <link id="temaSecundario"  rel="stylesheet" href="../../css/folhaDeEstiloCadastroCRUD.css">
     <script src="../../scripts/funcoes.js"></script>
     <script>
         function resultadosVagas(){
@@ -95,8 +95,8 @@
 
     <ul id="BotoesMenu">
         <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
-        <li class="Menu"> <a class="Menu"  onclick="trocaCss('css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
-        <li class="Menu"> <a class="Menu" onclick="trocaCss('css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
+        <li class="Menu"> <a class="Menu"  onclick="trocaCss('../../css/IdentidadeVisual.css','../../css/folhaDeEstiloCadastroCRUD.css')">Tema Original</a> </li>
+        <li class="Menu"> <a class="Menu" onclick="trocaCss('../../css/IdentidadeVisualStile02.css','../../css/folhaDeEstiloCadastroCRUDStile02.css')">Tema Novo</a> </li>
     </ul>
 </div>
 
@@ -201,10 +201,13 @@
             $conn->close();
         ?>
         </form>
-    </div>
+
+
 </div>
 
 <hr>
+
+<div>
 
 <table class="list">
     <tr class="list">
@@ -218,6 +221,8 @@
         <th>&nbsp;</th>
     </tr>
     
+    </div> 
+
 <?php # Lista o select do BD
 
 include('connect.php');
