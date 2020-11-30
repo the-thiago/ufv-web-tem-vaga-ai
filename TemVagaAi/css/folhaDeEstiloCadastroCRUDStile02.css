@@ -3,13 +3,14 @@ body{
     color: white;
 }
 table.list{
-    width: 80%;
+    width: 99%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
+    
 }
 td.list, th.list{
-    border: 1px solid gray;
+    border: 1px solid rgb(0, 0, 0);
     border-collapse: collapse;
 }
 td.action{
@@ -18,3 +19,9 @@ td.action{
 h3.obrigatorio{
     color: lightcoral;
 }
+div#rodape{
+    position: relative;
+    top: 520px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+ }

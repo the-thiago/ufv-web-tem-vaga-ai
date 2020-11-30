@@ -207,21 +207,21 @@
 
 <hr>
 
-<div>
+<div class="divTabela">
 
-<table class="list">
-    <tr class="list">
-        <th class="list">id</th>
-        <th class="list">nome</th>
-        <th class="list">descricao</th>
-        <th class="list">diaria</th>
-        <th class="list">caminhoFoto</th>
-        <th class="list">cidade</th>
-        <th>&nbsp;</th>
-        <th>&nbsp;</th>
-    </tr>
+    <table class="list">
+        <tr class="list">
+            <th class="list">id</th>
+            <th class="list">nome</th>
+            <th class="list">descricao</th>
+            <th class="list">diaria</th>
+            <th class="list">caminhoFoto</th>
+            <th class="list">cidade</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
     
-    </div> 
+</div> 
 
 <?php # Lista o select do BD
 
@@ -276,7 +276,13 @@ if($result->num_rows > 0){
 
 $conn->close();
 ?>
-
+    <div id="rodape">
+        <ul class="rodape">
+            <li class="rodape">Sobre</li>
+            <li class="rodape"><a href="html/sobreTemVagaAi.html">Tem Vaga Ai</a></li> 
+            <li class="rodape"><a href="html/sobreDesenvolvedor.html">Desenvolvido</a></li> 
+        </ul>
+    </div>
 
 
 </body>
