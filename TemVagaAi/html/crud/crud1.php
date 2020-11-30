@@ -94,7 +94,7 @@
     </form>
 
     <ul id="BotoesMenu">
-        <li class="Menu"> <a class="Menu" href="http://localhost/TemVagaAiProjeto/TemVagaAi/html/crud/crud1.php">Cadastro</a> </li>
+        <li class="Menu"> <a class="Menu" href="crud1.php">Cadastro</a> </li>
         <li class="Menu"> <a class="Menu"  onclick="trocaCss('../../css/IdentidadeVisual.css','../../css/folhaDeEstiloCadastroCRUD.css')">Tema Original</a> </li>
         <li class="Menu"> <a class="Menu" onclick="trocaCss('../../css/IdentidadeVisualStile02.css','../../css/folhaDeEstiloCadastroCRUDStile02.css')">Tema Novo</a> </li>
     </ul>
@@ -279,8 +279,8 @@ $conn->close();
     <div id="rodape">
         <ul class="rodape">
             <li class="rodape">Sobre</li>
-            <li class="rodape"><a href="html/sobreTemVagaAi.html">Tem Vaga Ai</a></li> 
-            <li class="rodape"><a href="html/sobreDesenvolvedor.html">Desenvolvido</a></li> 
+            <li class="rodape"><a href="../sobreTemVagaAi.html">Tem Vaga Ai</a></li> 
+            <li class="rodape"><a href="../sobreDesenvolvedor.html">Desenvolvido</a></li> 
         </ul>
     </div>
 
