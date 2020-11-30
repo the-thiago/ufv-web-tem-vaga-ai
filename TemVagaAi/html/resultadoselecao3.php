@@ -76,26 +76,35 @@
         <!-- Aqui vai ter as informacoes da tela anterio + um campo de informacao grande-->
         <div id="grid-container">
             <div class="left">
-                <h1>Apartamento Praia</h1>
-                <h2>Diaria: R$400,00</h2>
-                <h3>Balneário Camboriú SC</h3>
-                <p>Apartamento com vista pro mar</p>
-                <!-- texto aleatorio-->
-                <p>
-                    Lorem ipsum nisl vehicula elementum netus curabitur egestas porttitor, morbi orci sagittis eleifend
-                    nisi
-                    volutpat lorem curabitur, mi dictum purus mattis sit arcu malesuada.
-                    pulvinar dapibus bibendum dictum erat leo consectetur convallis lacinia, aenean varius nunc aliquet
-                    posuere
-                    pretium sed consequat, senectus enim tristique eget nulla etiam tempus.
-                    mattis a dui nisi fames malesuada libero, interdum eget magna nunc erat netus mattis, lectus gravida
-                    taciti
-                    posuere vitae.
-                    leo turpis netus aenean suspendisse proin molestie interdum feugiat placerat commodo, convallis quis
-                    maecenas id metus amet hac magna adipiscing.
-                    amet convallis ultrices placerat feugiat consequat ultrices egestas, fermentum ante dapibus rutrum
-                    ipsum.
-                </p>
+                <?php
+                    function test_input($data){
+                        $data = trim($data);
+                        $data = stripslashes($data);
+                        $data = htmlspecialchars($data);
+                        return $data;
+                    }
+                    $id = test_input($_POST['id']);
+
+                    include('crud/connect.php');
+                    $sql = "SELECT * FROM vaga WHERE id=$id";
+                    $result = $conn->query($sql);
+                    
+                    $row = $result->fetch_assoc();
+                    $nome = $row['nome'];
+                    $descricao = $row['descricao'];
+                    $diaria = $row['diaria'];
+                    $caminhoFoto = $row['caminhoFoto'];
+                    $cidade = $row['cidade'];  
+
+
+                    echo "
+                        <h1>$nome</h1>
+                        <h2>Diaria: R$$diaria</h2>
+                        <h3>Localização: $cidade</h3>
+                        <p>Descrição: $descricao</p>
+                    ";
+                    $conn->close();
+                ?>
             </div>
             <div class="middle">
                 <div class="datas">

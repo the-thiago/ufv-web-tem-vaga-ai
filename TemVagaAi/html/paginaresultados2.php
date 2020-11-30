@@ -43,7 +43,7 @@
                 <option <?php if(isset($_POST['cidade'])){if($_POST['cidade'] == 'qualquer'){ echo'selected';}} ?> value="qualquer">Qualquer localização</option>
                 <option <?php if(isset($_POST['cidade'])){if($_POST['cidade'] == 'rio'){ echo'selected';}} ?> value="rio">Rio Paranaiba</option>                
             </select>
-            <input type='button' onclick='resultadosVagas();' value='Buscar' id="botaoTopo"> 
+            <input type='button' onclick='resultadosVagas();' value='Nova Busca' id="botaoTopo" style="padding:15px 15px;"> 
         </form>
 
         <ul id="BotoesMenu">
@@ -120,7 +120,7 @@
                         </div>
                     </div>  
                     <div class='divVerMaisInfos' id='divVerMaisInfos'>
-                        <form action='resultadoselecao3.php' id='verMaisInfos$id' class='verMaisInfos' method='GET'>        
+                        <form action='resultadoselecao3.php' id='verMaisInfos$id' class='verMaisInfos' method='POST'>        
                             <input type='hidden' id='id' name='id' value=$id>
                             <input type='button' class='btnVerMaisInfos' id='btnSubmit$id' name='btnSubmit$id' onclick='verMaisInfos($id);' value='Alugue!'> 
                         </form>
