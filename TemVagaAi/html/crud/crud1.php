@@ -8,51 +8,64 @@
     <link id="temaSecundario"  rel="stylesheet" href="../../css/folhaDeEstiloCadastroCRUD.css">
     <script src="../../scripts/funcoes.js"></script>
     <script>
+        function test_input(data){
+            data = data.trim();
+            data = data.replace('&', '&amp;').replace('<', '&lt;');
+            data = data.replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#039');
+            return data;
+        }
+        function verificacoes(){
+            var teveErro = false;
+            var erros = "ERRO!\n";
+            var nome = test_input(document.getElementById('nome').value);
+            var descricao = test_input(document.getElementById('descricao').value);
+            var diaria = test_input(document.getElementById('diaria').value);
+            var caminhoFoto = test_input(document.getElementById('caminhoFoto').value);            
+            var cidade = test_input(document.getElementById('cidade').value);
+            if(nome == null || nome == ""){
+                teveErro = true;
+                erros += "Nome está vazio!\n";
+            }
+            if(descricao == null || descricao == ""){
+                teveErro = true;
+                erros += "Descrição está vazio!\n";
+            }
+            if(diaria == null || diaria == ""){
+                teveErro = true;
+                erros += "Diaria está vazio!\n";
+            }
+            if( isNaN(diaria) ){
+                teveErro = true;
+                erros += "Valor do campo 'Diaria' deve ser numerico!\n(Use ponto para valor flutuante)\n";
+            }
+            if(caminhoFoto == null || caminhoFoto == ""){
+                teveErro = true;
+                erros += "Caminho da Foto está vazio!\n";
+            }
+            if(cidade == null || cidade == ""){
+                teveErro = true;
+                erros += "Cidade está vazio!";
+            }              
+
+            if(teveErro){                
+                alert(erros);
+                return false;
+            }
+            return true;
+        }
         function resultadosVagas(){
-            document.getElementById('entrada').submit();
+            test_input(document.getElementById('pesquisa').value);
+            document.getElementById('entrada').submit();           
         }
         function fnSubmit(){
-            /*
-            var continuar = confirm("Clique em 'Ok', para confirmar as alterações.");
-            if(continuar){
-
-                var teveErro = false;
-                var erros = "";
-                var usuario = document.getElementById('usuario');
-                var senha = document.getElementById('senha');
-                var email = document.getElementById('email');
-                var nome = document.getElementById('nome');
-                var telefone = document.getElementById('telefone');
-
-                if(usuario.length > 25 || usuario.length == 0){
-                    erros += "Tamanho invalido para usuario!\n";
-                    teveErro = true;
-                } else if(senha.length > 50 || senha.length == 0){
-                    erros += "Tamanho invalido para senha!\n";
-                    teveErro = true;
-                } else if(email.length > 80 || email.length == 0){
-                    erros += "Tamanho invalido para email!\n";
-                    teveErro = true;
-                } else if(nome.length > 250 ){
-                    erros += "Tamanho de 'nome' é maior que 250!\n";
-                    teveErro = true;
-                } else if(telefone.length > 11){
-                    erros += "Tamanho de 'telefone' é maior que 11!\n";
-                    teveErro = true;
-                }
-                if(teveErro == false){
+            if(verificacoes()){
+                var continuar = confirm("Clique em 'Ok', para confirmar as alterações.");
+                if(continuar){
                     document.getElementById('f1').submit();
-                } else {
-                    alert(erros);
                 }
-            }*/
-            var continuar = confirm("Clique em 'Ok', para confirmar as alterações.");
-            if(continuar){
-                document.getElementById('f1').submit();
-            }
+            }            
         }
-        function fnExclude(id){
-            
+        function fnExclude(id){            
             var continuar = confirm("Clique em 'Ok', para excluir o registro.");
             if(continuar){
                 document.getElementById('f1').submit();
@@ -102,7 +115,7 @@
 
 <div id="formInserirExterna">
     <div id="formInserirInterna">
-        <h3 class="obrigatorio">*E-mail deve ser único, usuario e senha são obrigatórios. Telefone apenas números e no máximo 11 números.</h3>
+        <h3 class="obrigatorio">Todos os campos devem ser preenchidos.</h3>
         <form action="crud2.php" method="post" id="f1" name="f1">
         <?php
             include('connect.php');

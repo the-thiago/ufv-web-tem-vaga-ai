@@ -9,7 +9,14 @@
     <link id="temaSecundario" rel="stylesheet" href="../css/folhaDeEstiloPagina02.css">
     <script src="../scripts/funcoes.js"></script>
     <script>
+        function test_input(data){
+            data = data.trim();
+            data = data.replace('&', '&amp;').replace('<', '&lt;');
+            data = data.replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#039');
+            return data;
+        }
         function resultadosVagas(){
+            test_input(document.getElementById('pesquisa').value);
             document.getElementById('entrada').submit();
         }
         function verMaisInfos(id){

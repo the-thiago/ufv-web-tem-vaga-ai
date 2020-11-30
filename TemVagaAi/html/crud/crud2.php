@@ -5,12 +5,6 @@ function test_input($data){
     $data = htmlspecialchars($data);
     return $data;
 }
-function usuarioSenhaValidos($usuario, $senha){
-    if(empty($usuario) || empty($senha)) {
-        return false;
-    }
-    return true;
-}
 
 include('connect.php');
 

@@ -8,7 +8,14 @@
     <link id="temaPrincipal" rel="stylesheet" href="css/IdentidadeVisual.css">
     <script src="scripts/funcoes.js"></script>
     <script>
+        function test_input(data){
+            data = data.trim();
+            data = data.replace('&', '&amp;').replace('<', '&lt;');
+            data = data.replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#039');
+            return data;
+        }
         function resultadosVagas(){
+            test_input(document.getElementById('pesquisa').value);
             document.getElementById('entrada').submit();
         }
     </script>
