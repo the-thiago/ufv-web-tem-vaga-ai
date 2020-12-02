@@ -194,7 +194,6 @@ ul.rodape {
     border: white solid 1px;
 }
 .btnVerMaisInfos{
-    margin-left: 8px;
     background-color: white;
     border: none;
     color: #444;
@@ -203,8 +202,7 @@ ul.rodape {
     font-size: 16px;
     border-radius: 10px;
     border: black solid 1px;
-    margin-left: 10px;
-
+    padding: 15px 30px;
 }
 .btnVerMaisInfos:hover{
     background-color: #444;
@@ -212,16 +210,14 @@ ul.rodape {
     border-radius: 10px;
     border: white solid 1px;
 }
-
-.btnVerMaisInfos{    
-    padding: 15px 30px;
-}
 .divVerMaisInfos{
     background-color: lightgray;
     padding-bottom: 10px;
     
 }
 .verMaisInfos{
+    justify-content: center;
+    display: flex;
     margin: 0 auto;
     width: 0%; /* Valor da Largura */
 }
