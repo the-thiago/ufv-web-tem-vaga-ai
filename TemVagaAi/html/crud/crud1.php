@@ -115,8 +115,11 @@
 
 <div id="formInserirExterna">
     <div id="formInserirInterna">
-        <h3 class="obrigatorio">Todos os campos devem ser preenchidos.</h3>
-        <form action="crud2.php" method="post" id="f1" name="f1">
+    <hr>
+    <h1>Cadastro:</h1>
+    <hr>
+        <form  action="crud2.php" method="post" id="f1" name="f1">
+
         <?php
             include('connect.php');
 
@@ -215,7 +218,7 @@
         ?>
         </form>
 
-
+        <h3 class="obrigatorio">*Todos os campos devem ser preenchidos.</h3>
 </div>
 
 <hr>
@@ -288,14 +291,18 @@ if($result->num_rows > 0){
 }
 
 $conn->close();
+
 ?>
-    <div id="rodape">
+<div id="fica aqui">
+<div id="rodape">
         <ul class="rodape">
             <li class="rodape">Sobre</li>
             <li class="rodape"><a href="../sobreTemVagaAi.html">Tem Vaga Ai</a></li> 
             <li class="rodape"><a href="../sobreDesenvolvedor.html">Desenvolvido</a></li> 
         </ul>
-    </div>
+</div>
+</div>
+
 
 
 </body>
