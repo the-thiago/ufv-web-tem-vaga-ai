@@ -20,6 +20,9 @@
             test_input(document.getElementById('pesquisa').value);
             document.getElementById('entrada').submit();
         }
+        function verVagaDoSlide(form){
+            document.getElementById(form).submit();
+        }
     </script>
 </head>
 
@@ -59,10 +62,19 @@
     <!--div principal informacoes que muda toda as paginas-->
     <div>
         <div id="slides-div" onload="carregarPagina();">
-            <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->
-            <img class="slide" id="slide1" src="" alt="baner1">
-            <img class="slide" id="slide2" src="" alt="baner2">
-            <img class="slide" id="slide3" src="" alt="baner3">
+            <!-- Só mudar o value dos forms para direcionar qual vaga sera aberta -->
+            <form action="html/resultadoselecao3.php" method="POST" id="id1">
+                <input type='hidden' id='id' name='id' value='8'>
+            </form>
+            <form action="html/resultadoselecao3.php" method="POST" id="id2">
+                <input type='hidden' id='id' name='id' value='4'>
+            </form>
+            <form action="html/resultadoselecao3.php" method="POST" id="id3">
+                <input type='hidden' id='id' name='id' value='5'>
+            </form>
+            <img class="slide" id="slide1" src="" alt="baner1" onclick="verVagaDoSlide('id1');" >
+            <img class="slide" id="slide2" src="" alt="baner2" onclick="verVagaDoSlide('id2');">
+            <img class="slide" id="slide3" src="" alt="baner3" onclick="verVagaDoSlide('id3');">
             <button class="botao-slide-esquerda" onclick="plusDivs(-1)">&#10094;</button>
             <button class="botao-slide-direita" onclick="plusDivs(1)">&#10095;</button>
         </div>

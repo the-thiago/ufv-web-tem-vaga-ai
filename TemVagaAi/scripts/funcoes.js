@@ -24,7 +24,7 @@ function trocaCss(cssPrincipal,cssSecundario){
 }
 
 function carregarSlidesCSV(){
-    d3.csv("scripts/slidesCSV.csv", function (data){               
+    d3.csv("CSV/slidesCSV.csv", function (data){               
         document.getElementById(data.id).src=data.src;
     });
 }
