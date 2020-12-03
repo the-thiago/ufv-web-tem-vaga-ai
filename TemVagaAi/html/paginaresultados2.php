@@ -55,8 +55,8 @@
 
         <ul id="BotoesMenu">
             <li class="Menu"> <a class="Menu" href="crud/crud1.php">Cadastro</a> </li>
-            <li class="Menu"> <a class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
-            <li class="Menu"> <a class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
+            <li class="Menu"> <a style="cursor: pointer;" class="Menu"  onclick="trocaCss('../css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
+            <li class="Menu"> <a style="cursor: pointer;" class="Menu" onclick="trocaCss('../css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
         </ul>
     </div>
     <?php    // Mantem a pesquisa antiga para possivel edição

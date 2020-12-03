@@ -108,8 +108,8 @@
 
     <ul id="BotoesMenu">
         <li class="Menu"> <a class="Menu" href="crud1.php">Cadastro</a> </li>
-        <li class="Menu"> <a class="Menu"  onclick="trocaCss('../../css/IdentidadeVisual.css','../../css/folhaDeEstiloCadastroCRUD.css')">Tema Original</a> </li>
-        <li class="Menu"> <a class="Menu" onclick="trocaCss('../../css/IdentidadeVisualStile02.css','../../css/folhaDeEstiloCadastroCRUDStile02.css')">Tema Novo</a> </li>
+        <li class="Menu"> <a style="cursor: pointer;" class="Menu"  onclick="trocaCss('../../css/IdentidadeVisual.css','../../css/folhaDeEstiloCadastroCRUD.css')">Tema Original</a> </li>
+        <li class="Menu"> <a style="cursor: pointer;" class="Menu" onclick="trocaCss('../../css/IdentidadeVisualStile02.css','../../css/folhaDeEstiloCadastroCRUDStile02.css')">Tema Novo</a> </li>
     </ul>
 </div>
 

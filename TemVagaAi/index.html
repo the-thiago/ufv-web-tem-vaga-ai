@@ -7,6 +7,7 @@
     <title>Tem Vaga Ai!</title>
     <link id="temaPrincipal" rel="stylesheet" href="css/IdentidadeVisual.css">
     <link id="temaSecundario" rel="stylesheet" href="css/folhaDeEstiloPagina01.css">
+    <script src="scripts/d3.js"></script>
     <script src="scripts/funcoes.js"></script>
     <script>
         function test_input(data){
@@ -22,7 +23,7 @@
     </script>
 </head>
 
-<body onload="showDivs()">
+<body onload="showDivs(); carregarSlidesCSV();">
     <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
@@ -51,20 +52,19 @@
 
         <ul id="BotoesMenu">
             <li class="Menu"> <a class="Menu" href="html/crud/crud1.php">Cadastro</a> </li>
-            <li class="Menu"> <a class="Menu"  onclick="trocaCss('css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
-            <li class="Menu"> <a class="Menu" onclick="trocaCss('css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
+            <li class="Menu"> <a style="cursor: pointer;" class="Menu" onclick="trocaCss('css/IdentidadeVisual.css','css/folhaDeEstiloPagina01.css')">Tema Original</a> </li>
+            <li class="Menu"> <a style="cursor: pointer;" class="Menu" onclick="trocaCss('css/IdentidadeVisualStile02.css','css/folhaDeEstiloPagina01Stile02.css')">Tema Novo</a> </li>
         </ul>
     </div>
     <!--div principal informacoes que muda toda as paginas-->
     <div>
         <div id="slides-div" onload="carregarPagina();">
             <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->
-            <img class="slide" src="imagens/banner1_500X600.png" alt="baner1">
-            <img class="slide" src="imagens/banner2_500X600.png" alt="baner2">
-            <img class="slide" src="imagens/banner3_500X600.png" alt="baner3">
+            <img class="slide" id="slide1" src="" alt="baner1">
+            <img class="slide" id="slide2" src="" alt="baner2">
+            <img class="slide" id="slide3" src="" alt="baner3">
             <button class="botao-slide-esquerda" onclick="plusDivs(-1)">&#10094;</button>
             <button class="botao-slide-direita" onclick="plusDivs(1)">&#10095;</button>
-
         </div>
         <div id="grid-container">
             <div class="left">
