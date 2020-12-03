@@ -64,7 +64,6 @@
             $pesquisa = $_POST['pesquisa'];
             echo "
             <script> document.getElementById('pesquisa').value = '$pesquisa'; 
-                console.log('aq');
             </script>
             ";
         }

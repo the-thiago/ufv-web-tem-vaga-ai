@@ -7,6 +7,7 @@
     <title>Detalhes - Tem Vaga Ai!</title>
     <link id="temaPrincipal" rel="stylesheet" href="../css/IdentidadeVisual.css">
     <link id="temaSecundario" rel="stylesheet" href="../css/folhaDeEstiloPagina03.css">
+    <script src="../scripts/d3.js"></script>
     <script src="../scripts/funcoes.js"></script>
     <script>
         function test_input(data){
@@ -139,19 +140,25 @@
                     </form>
                 </div>
             </div>
-            <div class="right">
-                <img src="../imagens/cara_pessoa.png" alt="carapessoa">
-                <h1>Ze sem Criatividade</h1>
-                <h2>18 anos.</h2>
-                <h3>Balneário Camboriú SC</h3>
-                <p>Gostei muito da casa, bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla
-                    blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla
-                    blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                    bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla
-                    blabla bla blabla bla blabla bla blabla bla blabla bla bla
-                </p>
+            
+            <?phpecho " a $id";?>
+            
+            
+            <div class="right"  >
+                <img src="../imagens/cara_pessoa.png" alt="carapessoa" alt="carapessoa">
+                <h1 id="nome<?php echo "$id";?>">Nome </h1>
+                <h2 id="idade<?php echo "$id";?>">Idade</h2>
+                <h3><?php echo "$cidade";?></h3>
+                <p id="comentario<?php echo "$id";?>">c</p>
             </div>
+            <?php echo "
+                <script> 
+                    console.log('ayhshyiashiyu');
+                    carregarUmComentario($id);
+                </script> 
+                ";
+            ?>
+            
         </div>
 
     </div>

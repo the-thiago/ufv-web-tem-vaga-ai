@@ -28,3 +28,21 @@ function carregarSlidesCSV(){
         document.getElementById(data.id).src=data.src;
     });
 }
+function carregarComentariosCSV(){
+    d3.csv("CSV/comentarios.csv", function (data){    
+        if(document.getElementById('nome'+data.id) == null)
+            return;
+        document.getElementById('nome'+data.id).innerHTML =data.nome;
+        document.getElementById('idade'+data.id).innerHTML =data.idade+' anos.';
+        document.getElementById('comentario'+data.id).innerHTML =data.comentario;
+    });
+}
+function carregarUmComentario(id){
+    d3.csv("../CSV/comentarios.csv", function (data){   
+        if('nome'+data.id == 'nome'+id){
+            document.getElementById('nome'+data.id).innerHTML =data.nome;
+            document.getElementById('idade'+data.id).innerHTML =data.idade+' anos.';
+            document.getElementById('comentario'+data.id).innerHTML =data.comentario;
+        }
+    });
+}
