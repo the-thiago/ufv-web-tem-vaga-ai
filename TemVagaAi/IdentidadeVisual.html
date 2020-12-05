@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identidade Visual</title>
     <link id="temaPrincipal" rel="stylesheet" href="css/IdentidadeVisual.css">
+    <script src="scripts/d3.js"></script>
     <script src="scripts/funcoes.js"></script>
     <script>
         function test_input(data){
@@ -18,10 +19,13 @@
             test_input(document.getElementById('pesquisa').value);
             document.getElementById('entrada').submit();
         }
+        function verVagaDoSlide(form){
+            document.getElementById(form).submit();
+        }
     </script>
 </head>
 
-<body onload="showDivs()">
+<body onload="showDivs(); carregarSlidesCSV();">
     <!-- div aviso do covid-19 -->
     <div id="aviso">
         <div class="AvisoEsquerda" id="AvisoEsquerda">
@@ -59,13 +63,21 @@
 
     <div>
         <div id="slides-div" onload="carregarPagina();">
-            <!-- aqui coloquei 3 imagens pra voce poder colocar o css pular as imagens-->
-            <img class="slide" src="imagens/banner1_500X600.png" alt="baner1">
-            <img class="slide" src="imagens/banner2_500X600.png" alt="baner2">
-            <img class="slide" src="imagens/banner3_500X600.png" alt="baner3">
+            <!-- Só mudar o value dos forms para direcionar qual vaga sera aberta -->
+            <form action="html/resultadoselecao3.php" method="POST" id="id1">
+                <input type='hidden' id='id11' name='id' value='1'>
+            </form>
+            <form action="html/resultadoselecao3.php" method="POST" id="id2">
+                <input type='hidden' id='id22' name='id' value='2'>
+            </form>
+            <form action="html/resultadoselecao3.php" method="POST" id="id3">
+                <input type='hidden' id='id33' name='id' value='3'>
+            </form>
+            <img class="slide" id="slide1" src="" alt="baner1" onclick="verVagaDoSlide('id1');" >
+            <img class="slide" id="slide2" src="" alt="baner2" onclick="verVagaDoSlide('id2');">
+            <img class="slide" id="slide3" src="" alt="baner3" onclick="verVagaDoSlide('id3');">
             <button class="botao-slide-esquerda" onclick="plusDivs(-1)">&#10094;</button>
             <button class="botao-slide-direita" onclick="plusDivs(1)">&#10095;</button>
-
         </div>
     </div>
 
@@ -118,7 +130,7 @@
         <!-- Conteúdo de texto com imagem -->
         <div class="DivFotoResultados">
             <div class="DivTamanhoFoto">
-                <img class="fotoResultados" src="imagens/apartamento1/1.png" alt="Apartamentos Praia">
+                <img class="fotoResultados" src="imagens/IdentidadeVisual/slide3.jpg" alt="Apartamentos Praia">
             </div>
         </div>
         <div class="DivConteudo">

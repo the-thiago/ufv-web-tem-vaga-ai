@@ -104,8 +104,8 @@
                 $nome = $row['nome'];
                 $descricao = $row['descricao'];
                 $diaria = $row['diaria'];
-                $caminhoFoto = $row['caminhoFoto'];
                 $cidade = $row['cidade'];    
+                $arquivo1 = $row['arquivo1']; 
                 
 
                 echo "
@@ -114,7 +114,7 @@
                         <div class='DivFotoResultados'>
                             <div class='DivTamanhoFoto'>
                                 
-                                    <img class='fotoResultados' src='$caminhoFoto' alt='Rancho Amarelo'>
+                                    <img class='fotoResultados' src='../imagensVagasBD/$arquivo1' alt='Rancho Amarelo'>
                                 
                             </div>
                         </div>

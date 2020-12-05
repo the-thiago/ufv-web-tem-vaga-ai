@@ -19,9 +19,12 @@
             var erros = "ERRO!\n";
             var nome = test_input(document.getElementById('nome').value);
             var descricao = test_input(document.getElementById('descricao').value);
-            var diaria = test_input(document.getElementById('diaria').value);
-            var caminhoFoto = test_input(document.getElementById('caminhoFoto').value);            
+            var diaria = test_input(document.getElementById('diaria').value);          
             var cidade = test_input(document.getElementById('cidade').value);
+            var arquivo1 = document.getElementById('arquivo1').value;
+            var arquivo2 = document.getElementById('arquivo2').value;
+            var arquivo3 = document.getElementById('arquivo3').value;
+            var arquivo4 = document.getElementById('arquivo4').value;
             if(nome == null || nome == ""){
                 teveErro = true;
                 erros += "Nome está vazio!\n";
@@ -38,14 +41,26 @@
                 teveErro = true;
                 erros += "Valor do campo 'Diaria' deve ser numerico!\n(Use ponto para valor flutuante)\n";
             }
-            if(caminhoFoto == null || caminhoFoto == ""){
-                teveErro = true;
-                erros += "Caminho da Foto está vazio!\n";
-            }
             if(cidade == null || cidade == ""){
                 teveErro = true;
-                erros += "Cidade está vazio!";
-            }              
+                erros += "Cidade está vazio!\n";
+            }    
+            if(arquivo1 == null || arquivo1 == ""){
+                teveErro = true;
+                erros += "Foto 1 está vazio!\n";
+            }
+            if(arquivo2 == null || arquivo2 == ""){
+                teveErro = true;
+                erros += "Foto 2 está vazio!\n";
+            }
+            if(arquivo3 == null || arquivo3 == ""){
+                teveErro = true;
+                erros += "Foto 3 está vazio!\n";
+            }
+            if(arquivo4 == null || arquivo4 == ""){
+                teveErro = true;
+                erros += "Foto 4 está vazio!";
+            }
 
             if(teveErro){                
                 alert(erros);
@@ -75,6 +90,10 @@
         function fnEditar(id){
             window.location.replace("crud1.php?mode=update&id="+id);
         }
+        /*
+        function carregarFoto(nomeFoto){
+            document.getElementById('arquivo1').src = ('../../imagensVagasBD/' + nomeFoto);
+        }*/
     </script>
 </head>
 <body>
@@ -118,7 +137,7 @@
     <hr>
     <h1>Cadastro:</h1>
     <hr>
-        <form  action="crud2.php" method="post" id="f1" name="f1">
+        <form  action="crud2.php" method="post" id="f1" name="f1" enctype="multipart/form-data">
 
         <?php
             include('connect.php');
@@ -138,8 +157,11 @@
                             $nome = $row['nome'];
                             $descricao = $row['descricao'];
                             $diaria = $row['diaria'];
-                            $caminhoFoto = $row['caminhoFoto'];
-                            $cidade = $row['cidade'];                    
+                            $cidade = $row['cidade'];      
+                            $arquivo1 = $row['arquivo1'];      
+                            $arquivo2 = $row['arquivo2'];  
+                            $arquivo3 = $row['arquivo3'];   
+                            $arquivo4 = $row['arquivo4'];            
                         }            
                     }
 
@@ -158,12 +180,28 @@
                             <td><input type='text' name='diaria' id='diaria' value='$diaria'></td>
                         </tr>
                         <tr>
-                            <td><b>CaminhoFoto: </b></td>
-                            <td><input type='text' name='caminhoFoto' id='caminhoFoto' value='$caminhoFoto'></td>
-                        </tr>
-                        <tr>
                             <td><b>Cidade: </b></td>
                             <td><input type='text' name='cidade' id='cidade' value='$cidade'></td>
+                        </tr>
+                        <tr>
+                            <td><b>Foto 1: </b></td>
+                            <td><input type='file' data-max-size='32768000' required name='arquivo1' id='arquivo1' value='$arquivo1'></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><b>Foto 2: </b></td>
+                            <td><input type='file' data-max-size='32768000' required name='arquivo2' id='arquivo2' value='$arquivo2'></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><b>Foto 3: </b></td>
+                            <td><input type='file' data-max-size='32768000' required name='arquivo3' id='arquivo3' value='$arquivo3'></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><b>Foto 4: </b></td>
+                            <td><input type='file' data-max-size='32768000' required name='arquivo4' id='arquivo4' value='$arquivo4'></td>
+                            
                         </tr>
                         <tr>
                             <td>&nbsp;</td>                
@@ -195,12 +233,24 @@
                         <td><input type='text' name='diaria' id='diaria'></td>
                     </tr>
                     <tr>
-                        <td><b>CaminhoFoto: </b></td>
-                        <td><input type='text' id='caminhoFoto' name='caminhoFoto'></td>
-                    </tr>
-                    <tr>
                         <td><b>Cidade: </b></td>
                         <td><input type='text' name='cidade' id='cidade'></td>
+                    </tr>
+                    <tr>
+                        <td><b>Foto 1: </b></td>
+                        <td><input type='file' data-max-size='32768000' required name='arquivo1' id='arquivo1'></td>
+                    </tr>
+                    <tr>
+                        <td><b>Foto 2: </b></td>
+                        <td><input type='file' data-max-size='32768000' required name='arquivo2' id='arquivo2'></td>
+                    </tr>
+                    <tr>
+                        <td><b>Foto 3: </b></td>
+                        <td><input type='file' data-max-size='32768000' required name='arquivo3' id='arquivo3'></td>
+                    </tr>
+                    <tr>
+                        <td><b>Foto 4: </b></td>
+                        <td><input type='file' data-max-size='32768000' required name='arquivo4' id='arquivo4'></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>                
@@ -227,12 +277,15 @@
 
     <table class="list">
         <tr class="list">
-            <th class="list">id</th>
-            <th class="list">nome</th>
-            <th class="list">descricao</th>
-            <th class="list">diaria</th>
-            <th class="list">caminhoFoto</th>
-            <th class="list">cidade</th>
+            <th class="list">ID</th>
+            <th class="list">Nome</th>
+            <th class="list">Descricao</th>
+            <th class="list">Diaria</th>
+            <th class="list">Cidade</th>
+            <th class="list">Nome da foto 1</th>
+            <th class="list">Nome da foto 2</th>
+            <th class="list">Nome da foto 3</th>
+            <th class="list">Nome da foto 4</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
         </tr>
@@ -252,9 +305,11 @@ if($result->num_rows > 0){
         $nome = $row['nome'];
         $descricao = $row['descricao'];
         $diaria = $row['diaria'];
-        $caminhoFoto = $row['caminhoFoto'];
         $cidade = $row['cidade'];    
-        
+        $arquivo1 = $row['arquivo1'];  
+        $arquivo2 = $row['arquivo2']; 
+        $arquivo3 = $row['arquivo3']; 
+        $arquivo4 = $row['arquivo4']; 
 
         echo "
         <tr class='list'>
@@ -262,9 +317,11 @@ if($result->num_rows > 0){
             <td class='list'>$nome</td>
             <td class='list'>$descricao</td>
             <td class='list'>$diaria</td>
-            <td class='list'>$caminhoFoto</td>
             <td class='list'>$cidade</td>
-            
+            <td class='list'>$arquivo1</td>
+            <td class='list'>$arquivo2</td>
+            <td class='list'>$arquivo3</td>
+            <td class='list'>$arquivo4</td>
             
             <td class='action'>
                 <input type='button' onclick='fnEditar($id);' value='Editar'>
@@ -278,6 +335,9 @@ if($result->num_rows > 0){
     }            
 }else{
     echo "  <tr class='list'>
+                <td class='list'>&nbsp;</td>
+                <td class='list'>&nbsp;</td>
+                <td class='list'>&nbsp;</td>
                 <td class='list'>&nbsp;</td>
                 <td class='list'>&nbsp;</td>
                 <td class='list'>&nbsp;</td>

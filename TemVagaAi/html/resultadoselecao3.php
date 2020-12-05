@@ -65,18 +65,44 @@
             <input type="radio" class="slide-controller" name="slide" />
             <div class="slide-show">
                 <ul class="slides-list">
-                    <li class="slide">
-                        <img src="../imagens/apartamento1/1.png" alt="Apartamentos Praia">
-                    </li>
-                    <li class="slide">
-                        <img src="../imagens/apartamento1/2.png" alt="Apartamentos Praia">
-                    </li>
-                    <li class="slide">
-                        <img src="../imagens/apartamento1/3.png" alt="Apartamentos Praia">
-                    </li>
-                    <li class="slide">
-                        <img src="../imagens/apartamento1/4.png" alt="Apartamentos Praia">
-                    </li>
+                    <?php 
+                        function test_input($data){
+                            $data = trim($data);
+                            $data = stripslashes($data);
+                            $data = htmlspecialchars($data);
+                            return $data;
+                        }
+                        $id = test_input($_POST['id']);
+    
+                        include('crud/connect.php');
+                        $sql = "SELECT * FROM vaga WHERE id=$id";
+                        $result = $conn->query($sql);
+                        
+                        $row = $result->fetch_assoc();
+                        $nome = $row['nome'];
+                        $descricao = $row['descricao'];
+                        $diaria = $row['diaria'];
+                        $cidade = $row['cidade'];  
+                        $arquivo1 = $row['arquivo1'];
+                        $arquivo2 = $row['arquivo2'];
+                        $arquivo3 = $row['arquivo3'];
+                        $arquivo4 = $row['arquivo4'];
+
+                        echo "                   
+                        <li class='slide'>
+                            <img src='../imagensVagasBD/$arquivo1' alt='Foto 1'>
+                        </li>
+                        <li class='slide'>
+                            <img src='../imagensVagasBD/$arquivo2' alt='Foto 2'>
+                        </li>
+                        <li class='slide'>
+                            <img src='../imagensVagasBD/$arquivo3' alt='Foto 2'>
+                        </li>
+                        <li class='slide'>
+                            <img src='../imagensVagasBD/$arquivo4' alt='Foto 3'>
+                        </li>
+                        ";
+                    ?>
                 </ul>
             </div>
         </div>
@@ -84,27 +110,7 @@
         <!-- Aqui vai ter as informacoes da tela anterio + um campo de informacao grande-->
         <div id="grid-container">
             <div class="left">
-                <?php
-                    function test_input($data){
-                        $data = trim($data);
-                        $data = stripslashes($data);
-                        $data = htmlspecialchars($data);
-                        return $data;
-                    }
-                    $id = test_input($_POST['id']);
-
-                    include('crud/connect.php');
-                    $sql = "SELECT * FROM vaga WHERE id=$id";
-                    $result = $conn->query($sql);
-                    
-                    $row = $result->fetch_assoc();
-                    $nome = $row['nome'];
-                    $descricao = $row['descricao'];
-                    $diaria = $row['diaria'];
-                    $caminhoFoto = $row['caminhoFoto'];
-                    $cidade = $row['cidade'];  
-
-
+                <?php               
                     echo "
                         <h1>$nome</h1>
                         <h2>Diaria: R$$diaria</h2>
@@ -133,16 +139,12 @@
                     <input id="botao-alugar" type="submit" value="Alugar" class="cor-botao">
                 </div>
                 <div class="duvida">
-                    <form action="#retorno" id="duvida">
+                    <form action="" id="duvida">
                         <textarea name="mensagem" id="Mensagens" rows="2" placeholder="Envie sua duvida:"></textarea>
-
-                        <input type="submit" value="Enviar" id="botao-duvida" class="cor-botao">
+                        <input disabled type="submit" value="Enviar" id="botao-duvida" class="cor-botao">
                     </form>
                 </div>
-            </div>
-            
-            <?phpecho " a $id";?>
-            
+            </div>                       
             
             <div class="right"  >
                 <img src="../imagens/cara_pessoa.png" alt="carapessoa" alt="carapessoa">
@@ -153,7 +155,6 @@
             </div>
             <?php echo "
                 <script> 
-                    console.log('ayhshyiashiyu');
                     carregarUmComentario($id);
                 </script> 
                 ";
